@@ -1582,5 +1582,738 @@ Example
 </html>
 
 ```
+---
+# bdi element
+
+BDI stands for Bi-Directional Isolation.
+
+The bdi tag isolates a part of text that might be formatted in a different direction from other text outside it.
+
+This element is useful when embedding user-generated content with an unknown text direction.
+
+example1
+```
+<ul>
+  <li>Kullanıcı: <bdi>arayüz</bdi>10</li>
+  <li>Kullanıcı: <bdi>إيان</bdi>20</li>
+</ul>
+
+
+```
+example2
+
+HTML
+
+```
+<h2>Examples of Using the &lt;bdi&gt; Tag</h2>
+
+<div class="examples">
+  <div class="unstyled">
+    <h3>Without &lt;bdi&gt;</h3>
+    <p>User WeberXx : 12 posts.</p>
+    <p>User HoberYx : 5 posts.</p>
+    <p>User إيان : 3 posts.</p>
+  </div>
+  <div class="styled">
+    <h3>With &lt;bdi&gt;</h3>
+    <p>User <bdi>WeberXx</bdi> : 12 posts.</p>
+    <p>User <bdi>HoberYx</bdi> : 5 posts.</p>
+    <p>User <bdi>إيان</bdi> : 3 posts.</p>
+  </div>
+</div>
+
+```
+CSS 
+
+example2
+```
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato';
+  text-align: justify;
+  font-size: 1.25em;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+
+```
+---
+
+# bdo element
+
+BDO stands for Bi-Directional Override.
+
+The bdo tag is used to override the current text direction.
+    
+HTML
+example1
+```
+<h2>Examples of Using the &lt;bdo&gt; Tag</h2>
+  
+<div class="examples">
+  <div class="unstyled">
+    <h3>Normal and "rtl" &lt;bdo&gt;</h3>
+    <p>Don't ever take a fence down until you know why it was put up.</p>
+	<p><bdo dir="rtl">Don't ever take a fence down until you know why it was put up.</bdo></p>
+  </div>
+
+```
+CSS 
+
+example1
+```
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato';
+  text-align: justify;
+  font-size: 1.25em;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+```
+HTML
+
+example2
+```
+<bdo dir="rtl">
+Bu metin  sağdan sola doğru devam edecek
+</bdo>
+
+```
+---
+# blockquote element
+
+The blockquote tag specifies a section that is quoted from another source.
+
+Browsers usually indent blockquote elements (look at example below to see how to remove the indentation).
+
+HTML 
+
+example1
+```
+<h1>Blockquote styling part 1</h1>
+<p>Here is a simple and clean blockquote styling</p>
+<blockquote>
+  <p>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition.<p>
+  <span>By Steve Jobs</span>
+ </blockguote>
+
+```
+CSS 
+
+example1
+
+```
+
+body {
+  color : #22313F;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #03C9A9;
+  margin: 1.5em 10px;
+  padding:10px;
+}
+blockquote:before {
+	font-family : georgia;
+  color: #6C7A89;
+  content: open-quote;
+  font-size: 60px;
+  /* how to fix the quote position*/
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+  letter-spacing : 1px;
+}
+
+blockquote span {
+  display : block;
+  margin-top : 10px;
+  margin-left : 10px;
+  font-size : 15px;
+  font-style:italic;
+}
+blockquote span:before {
+  content : "-";
+  margin-right : 3px;
+}
+
+```
+HTML 
+
+example2
+```
+<html>
+<body>
+
+<h1>The blockquote element</h1>
+
+<p>Here is a quote from WWF's website:</p>
+
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+
+</body>
+</html>
+
+```
+---
+# body element
+
+The body tag defines the document's body.
+
+The body element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+
+Note: There can only be one body element in an HTML document.
+
+example
+```
+<html>
+<head>
+<style>
+body {
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<h1>Hello world!</h1>
+<p>This is some text.</p>
+<p><a href="https://www.w3schools.com">Visit W3Schools.com!</a></p>
+
+</body>
+</html>
+
+```
+---
+
+# br tag
+
+The br tag inserts a single line break.
+
+The br tag is useful for writing addresses or poems.
+
+The br tag is an empty tag which means that it has no end tag.
+
+example
+```
+<html>
+<body>
+
+<h1>A Poem</h1>
+
+<p>Be not afraid of greatness.<br>
+Some are born great,<br>
+some achieve greatness,<br>
+and others have greatness thrust upon them.</p>
+
+<p><em>-William Shakespeare</em></p>
+
+</body>
+</html>
+
+```
+---
+# button element
+
+The button tag defines a clickable button.
+
+Inside a button element you can put text (and tags like i, b, strong, br, img, etc.). That is not possible with a button created with the input element!
+
+Tip: Always specify the type attribute for a button element, to tell browsers what type of button it is.
+
+Tip: You can easily style buttons with CSS! Look at the examples below or visit our CSS Buttons tutorial.
+
+HTML
+
+example1
+```
+<button class="buttonfx" type="submit">Slide Down</button>
+<button class="buttonfx slideleft">Slide Left</button>
+<button class="buttonfx slidebottomleft">Slide Corner</button>
+<button class="buttonfx angleinleft">Angle In</button>
+<br />
+
+<button class="buttonfx bouncein" type="submit">Bounce Down</button>
+<button class="buttonfx slideleft bouncein">Bounce Left</button>
+<button class="buttonfx slidebottomleft bouncein">Bounce Corner</button>
+<button class="buttonfx angleinleft bouncein">Bounce Angle</button>
+
+<br />
+<button class="buttonfx curtaindown">Curtain Down</button>
+<button class="buttonfx curtainup">Curtain Up</button>
+<button class="buttonfx angleindouble" type="submit">Double Angle</button>
+<button class="buttonfx doubletake">Double Take</button>
+
+<p><b>Tutorial:</b> <a href="http://blog.dynamicdrive.com/popular-css-button-hover-effects-explained/">Popular CSS Button Hover Effects Explained</a></b>
+
+```
+CSS 
+
+example1
+```
+.buttonfx{
+  color: black; /* button text color */
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #eee;
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  font: bold 16px 'Bitter', sans-serif; /* use google font */
+  line-height: 2;
+  position: relative;
+	display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+	text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #259f6c; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: #fafcd6; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+	color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* //// Slide Left  //// */
+
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* //// Slide Corner  //// */
+
+.slidebottomleft:after{
+  transform: translate3D(-100%,100%,0);
+}
+
+.slidebottomleft:hover:after{
+	transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* //// Angle In  //// */
+
+
+.angleinleft:after{
+  width: 200%;
+  transform-origin: 0 bottom;
+  transform: translate3D(-50%,0,0) rotate(-50deg);
+}
+
+.angleinleft:hover:after{
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+
+/* //// Curtain Down  //// */
+
+.curtaindown{
+  border: 1px solid #eee;
+  border-bottom: 4px solid #eee;
+}
+
+.curtaindown:before,
+.curtaindown:after{
+  background: #259f6c;
+  transform: translate3D(0,-100%,0);
+}
+
+.curtaindown:after{
+  transform: translate3D(0,100%,0);
+}
+
+.curtaindown:hover:before,
+.curtaindown:hover:after{
+  transform: translate3D(0,-50%,0);
+  transition: all .5s;
+}
+
+.curtaindown:hover:after{
+  transform: translate3D(0,50%,0);
+}
+
+/* //// Curtain Up  //// */
+
+.curtainup{
+  transform-style: preserve-3d;
+}
+
+.curtainup:before,
+.curtainup:after{
+  transform-origin: center center;
+  transform: scale(1,0);
+}
+
+
+.curtainup:hover:before,
+.curtainup:hover:after{
+  transform: scale(1);
+  border-radius: 0;
+}
+
+/* //// Double Angle In  //// */
+
+.angleindouble{
+  border: 1px solid #eee;
+  border-bottom: 4px solid #eee;
+}
+
+.angleindouble:before{
+  top: 0;
+  left: 0;
+  width: 150%;
+  background: #259f6c;
+  transform-origin: 0 bottom;
+  transform:  translateX(-100%) rotate(-30deg);
+}
+
+.angleindouble:after{
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 150%;
+  transform-origin: right bottom;
+  transform: translateX(100%) rotate(30deg);
+}
+
+.angleindouble:hover:before{
+  left: 0;
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+
+.angleindouble:hover:after{
+  right: 0;
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+
+
+/* //// Double Take  //// */
+
+.doubletake:before,
+.doubletake:after{
+  width: 200%;
+  background: #259f6c;
+  transform-origin: 0 bottom;
+  transform: translate3D(-50%,0,0) rotate(-50deg);
+}
+
+.doubletake:before{
+  opacity: .4;
+}
+
+.doubletake:hover:before,
+.doubletake:hover:after{
+  transform: rotate(0deg);
+  transition: all .25s;
+}
+
+.doubletake:hover:after{
+  transition-delay: .25s;
+}
+
+
+/* #### Bounce classes #### */
+
+.bouncein:hover:before,
+.bouncein:hover:after{
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+}
+
+```
+
+HTML example2
+
+```
+<div class="container" style="padding-top:80px;">
+  <div class="col-md-3">
+    Trigger with navbar, a link, a button,
+    <br>or even just set an automatic timer!
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup"> Launch demo modal </button>
+  </div>
+</div>
+
+```
+CSS 
+
+example2
+```
+<div class="container" style="padding-top:80px;">
+  <div class="col-md-3">
+    Trigger with navbar, a link, a button,
+    <br>or even just set an automatic timer!
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#lab-slide-bottom-popup"> Launch demo modal </button>
+  </div>
+</div>
+
+```
+---
+# canvas tag
+
+The canvas tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
+
+The canvas tag is transparent, and is only a container for graphics, you must use a script to actually draw the graphics.
+
+Any text inside the canvas element will be displayed in browsers with JavaScript disabled and in browsers that do not support canvas.
+
+HTML
+
+example1
+```
+<canvas id="c" width="500" height="500"></canvas><br/>
+<!-- <canvas id="cv" width="500" height="500"></canvas> -->
+<button type="button" id="btn"> Export&Import SVG</button>
+<button type="button" id="btn_edit"> Export&Import JSON </button>  
+  
+  <p>Export to SVG</p> 
+ <div id="svg-tag"></div>
+  
+ <p>Import from SVG</p> 
+ <canvas id="canvas-svg" width="500" height="500"></canvas>  
+ <p>Import from JSON</p> 
+ <canvas id="canvas" width="500" height="500"></canvas> 
+
+
+```
+CSS 
+
+example1
+```
+body{
+  background-color: #cccccc;
+}
+
+.lw { font-size: 60px; }
+canvas{
+  border-style: dashed;  
+}
+button{
+  margin:30px;
+}
+div{
+  border-style: solid;
+  border-color: #98bf21;
+}
+
+```
+HTML
+
+example2
+```
+<div>
+  <button id="btn1">Tween Simple Bezier</button> <button id="btn2">Tween Simple Bezier Curviness 1.5</button> <button id="btn3">Tween Quadratic Bezier</button>
+</div>
+
+<canvas id="myCanvas" width="220" height="220" style="border:1px solid #d3d3d3; background:#fff;margin-top:24.5px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<div>
+<canvas id="myCanvas2" width="220" height="220" style="border:1px solid #d3d3d3; background:#fff;margin-top:24.5px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+
+<div class="div2" id="div2"></div>
+<div class="div3" id="div3"></div>
+<div class="div1" id="div1"></div>
+
+```
+CSS 
+
+example2
+```
+.div1, .div2{
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:48px;
+	left:450px;
+	background:#00f;
+	border-radius:50%;
+}
+.div2, .div3{
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:60px;
+  left:108px;
+  border-radius:50%;
+  background:#F00;
+}
+.div3{
+  top:310px;
+}
+
+```
+---
+
+# caption tag
+
+The caption tag defines a table caption.
+
+The caption tag must be inserted immediately after the table tag.
+
+Tip: By default, a table caption will be center-aligned above a table. However, the CSS properties text-align and caption-side can be used to align and place the caption.
+
+HTML
+
+example1
+```
+<table border="1">
+  <caption>This is a caption Table</caption>
+  <tr>
+    <th>Title 1</th>
+    <th>Title 2</th>
+  </tr>
+  <tr>
+    <td>Name 1</td>
+    <td>Description 1</td>
+  </tr>
+	  <tr>
+    <td>Name 2</td>
+    <td>Description 2</td>
+  </tr>
+	  <tr>
+    <td>Name 3</td>
+    <td>Description 3</td>
+  </tr>
+</table>
+
+```
+example2
+
+```
+<table>
+  <caption>Aylık Gider</caption>
+  <tr>
+    <th>ay</th>
+    <th>gider</th>
+  </tr>
+  <tr>
+    <td>Ocak</td>
+    <td>100 TL</td>
+  </tr>
+</table>
+
+```
+---
+
+# center tag
+
+The center tag was used in HTML4 to center-align text.
+
+---
+# cite element
+
+The cite tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+
+Note: A person's name is not the title of a work.
+
+The text in the cite element usually renders in italic.
+
+example
+```
+<html>
+<body>
+
+<h1>The cite element</h1>
+
+<img src="img_the_scream.jpg" width="220" height="277" alt="The Scream">
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+</body>
+</html>
+
+```
+
+
+
+
+
+
+
+
+
+
 
 
