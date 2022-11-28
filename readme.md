@@ -2305,11 +2305,530 @@ example
 </html>
 
 ```
+---
+# code tag
+
+The code tag is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font.
+
+Tip: This tag is not deprecated. However, it is possible to achieve richer effect by using CSS (see example below).
+
+example1
+```
+<html>
+<head>
+<style>
+code { 
+  font-family: monospace;
+}
+</style>
+</head>
+<body>
+
+<p>A code element is displayed like this:</p>
+
+<code>A piece of computer code</code>
+
+<p>Change the default CSS settings to see the effect.</p>
+
+</body>
+</html>
+
+```
+example2
+
+HTML
+```
+<body>
+
+<h1>The code element + CSS</h1>
+
+<p>The HTML <code>button</code> tag defines a clickable button.</p>
+<p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+
+</body>
+
+```
+CSS
+```
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+
+}
+```
+---
+# column element
+
+The col tag specifies column properties for each column within a colgroup element.
+
+The col tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+
+Example1
+
+HTML
+```
+<div class="col-controls">
+  <button class="add_column">Add columns <span>(+)</span></button>
+  <button class="remove_column">Remove columns <span>(-)</span></button>
+</div>
+<table class="test-table">
+  <colgroup>
+    <col class="data" />
+    <col class="data" />
+    <col class="data" />
+    <col class="data" />
+    <col class="data" />
+    <col class="data" />
+    <col class="data" />
+    <col class="name" />
+  </colgroup>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>I'm the last one <span>(min-width: 200px)</span></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>I'm the last element of the second row</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>I'm the last element of the third row</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>I'm the last element of the fourth row</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>I'm the last element of the fifth row</td>
+    </tr>
+  </tbody>
+</table>
+
+```
+CSS
+```
+body {
+  padding-top: 3.5em;
+}
+.col-controls {
+  position: fixed;
+  left: 1em;
+  top: .5em;
+}
+table { 
+  width: auto;
+  min-width: 100%;
+  table-layout: fixed;
+}
+col.data { width: 120px; }
+
+col.name {
+  //background: #f00;
+  
+}
+.test-table {
+  td {
+    min-width: 110px;
+    //white-space: nowrap;
+    border: 1px solid #ededec;
+    padding: .5em;
+    color: #777;
+    
+    &:nth-child(odd) {
+      background: #f7f7f7;
+    }
+    &:last-child {
+      min-width: 200px;
+      background: #19c8b1;
+      color: #fff;
+      border-color: #18af9b;
+      span {
+        color: #fff;
+        white-space: nowrap;
+      }
+    }
+    
+    span {
+      color: #999;
+      font-weight: 100;
+      font-size: .8em;
+    }
+  }
+}
+
+button {
+  border: 1px solid #d36b4e;
+  background: #ee7e5e;
+  color: #fff;
+  font-weight: 100;
+  padding: .5em 1em;;
+  span {
+    font-weight: 700;
+  }
+}
+
+```
+HTML
+example2
+```
+<table border="1">
+<colgroup>
+	<col span="2" style="background: green">
+	<col>
+	<col>
+	<col style="background: red">
+	<col>
+</colgroup>
+<tr>
+	<th>title 1</th>
+	<th>title 2</th>
+	<th>title 3</th>
+	<th>title 4</th>
+	<th>title 5</th>
+</tr>
+<tr>
+	<td>content 1</td>
+	<td>content 2</td>
+	<td>content 3</td>
+	<td>content 4</td>
+	<td>content 5</td>
+</tr>
+</table>
+
+```
+---
+# column group tag
+
+The colgroup tag specifies a group of one or more columns in a table for formatting.
+
+The colgroup tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+
+example1
+```
+<table border="1">
+<colgroup>
+	<col span="2" style="background: green">
+	<col>
+	<col>
+	<col style="background: red">
+	<col>
+</colgroup>
+<tr>
+	<th>title 1</th>
+	<th>title 2</th>
+	<th>title 3</th>
+	<th>title 4</th>
+	<th>title 5</th>
+</tr>
+<tr>
+	<td>content 1</td>
+	<td>content 2</td>
+	<td>content 3</td>
+	<td>content 4</td>
+	<td>content 5</td>
+</tr>
+</table>
+
+```
+---
+# data element
+
+The data tag is used to add a machine-readable translation of a given content.
+
+This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+
+Tip: If the content is time- or date-related, use the time element instead.
+
+example
+```
+<html>
+<body>
+
+<h1>The data element</h1>
+
+<p>The following example displays product names but also associates each name with a product number:</p>
+
+<ul>
+  <li><data value="21053">Cherry Tomato</data></li>
+  <li><data value="21054">Beef Tomato</data></li>
+  <li><data value="21055">Snack Tomato</data></li>
+</ul>
+
+</body>
+</html>
+
+```
+---
+# Datalist tag
+The datalist tag specifies a list of pre-defined options for an input element.
+
+The datalist tag is used to provide an "autocomplete" feature for input elements. Users will see a drop-down list of pre-defined options as they input data.
+
+The datalist element's id attribute must be equal to the input element's list attribute (this binds them together).
+
+HTML 
+
+example1
+```
+<h2>Examples of Using the &lt;datalist&gt; Tag</h2>
+
+<div class="examples">
+  <div class="unstyled">
+    <h3>Trying Typing 'The' in the Input.</h3>
+    <label>Choose a movie from this list:
+<input list="movies" name="myMovie" /></label>
+    <datalist id="movies">
+  <option value="The Shawshank Redemption">
+  <option value="The Godfather">
+  <option value="The Dark Knight">
+  <option value="12 Angry Men">
+  <option value="Schindler's List">
+  <option value="Pulp Fiction">
+</datalist>
+  </div>
+</div>
+
+```
+ example2
+```
+<label for="favourite-sites">Select your favorite website!</label>
+<input type="url" name="favourite-sites" id="favourite-sites" list="site-list"/>
+<datalist id="site-list">
+  <option value="https://www.google.com.au">
+  <option value="http://www.reddit.com">
+  <option value="http://www.sitepoint.com">
+</datalist>
+
+```
+---
+# dd tag
+The dd tag is used to describe a term/name in a description list.
+
+The dd tag is used in conjunction with dl (defines a description list) and dt (defines terms/names).
+
+Inside a dd tag you can put paragraphs, line breaks, images, links, lists, etc.
+
+example1
+```
+<h1>Basic Definition List</h1>
+	<dl>
+		<dt>Title 1</dt>
+			<dd>First Description for Title 1</dd>
+			<dd>Second Description for Title 1</dd>
+		<dt>Title 2</dt>
+			<dd>First Description for Title 2</dd>
+			<dd>Second Description for Title 2</dd>
+	</dl>
+
+```
+example2
+```
+<dl>
+<dt>Can't you people take the law into your own hands?</dt>
+        
+<dd><p>Don't kid yourself, Jimmy. If a cow ever got the chance, he'd eat you and everyone you care about! When I held that gun in my hand, I felt a surge of power…like God must feel when he's holding a gun.</p></dd>
+
+<dt>What good is money if it can't inspire terror in your fellow man? </dt> 
+
+<dd><p>Aaah! Natural light! Get it off me! Get it off me! I don't like being outdoors, Smithers. For one thing, there's too many fat children.</p></dd>
+       
+<dt>Inflammable means flammable? </dt>
+  
+<dd><p> Look out, Itchy! He's Irish! You don't like your job, you don't strike. You go in every day and do it really half-assed. That's the American way.</p></dd>
+       
+<dt>He didn't give you gay, did he? Did he?!</dt>
+  
+<dd><p>TY'ever sat down and read this thing?</p></dd>
+       
+<dt>There's a *New* Mexico?</dt>
+       
+<dd><p>A woman is a lot like a refrigerator. Six feet tall, 300 pounds…it makes ice. Our differences are only skin deep, but our sames go down to the bone.</p></dd>
+      
+</dl>
+
+```
+---
+# delete tag
+The del tag defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.
 
 
+```
+<html>
+<head>
+<style>
+del {background-color: tomato;}
+ins {background-color: yellow;}
+</style>
+</head>
+<body>
+
+<h1>The del and ins elements + CSS</h1>
+
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+</body>
+</html>
+
+```
+---
+# detail tag
+The details tag specifies additional details that the user can open and close on demand.
+
+The details tag is often used to create an interactive widget that the user can open and close. By default, the widget is closed. When open, it expands, and displays the content within.
+
+Any sort of content can be put inside the details tag. 
+
+example
+```
+<details>
+	<summary>This is a detail tag</summary>
+	<p>Random content: Fat new smallness few supposing suspicion two. Course sir people worthy horses add entire suffer. How one dull get busy dare far. At principle perfectly by sweetness do. As mr started arrival subject by believe. Strictly numerous outlived kindness whatever on we no on addition. </p>
+</details>
+
+```
+---
+# defination tag
+
+The dfn tag stands for the "definition element", and it specifies a term that is going to be defined within the content.
+
+The nearest parent of the dfn tag must also contain the definition/explanation for the term.
+
+example
+```
+<html>
+<body>
+
+<h1>The dfn element</h1>
+
+<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<p>A <dfn>kiwi</dfn> is a...</p>
+
+```
+---
+# dialog tag
+
+The dialog tag defines a dialog box or subwindow.
+
+The dialog element makes it easy to create popup dialogs and modals on a web page.
+
+example1
+```
+<header class="box rad p1">Test Template</header>
+
+<div class="container">
+	<button class="field btn" id="submit">Submit</button>
+</div>
+
+<dialog id="modal" class="box rad bor p0 modal">
+	<div class="flex borb p1">
+		<div id="modalHeading"></div>
+		<button id="closeModal" class="field iconbtn">&#x26CC;</button>
+	</div>
+	<div id="modalContents" class="p1 borb"></div>
+	<div class="flex p1">
+		<button id="cancelModal" class="field btn"></button>
+		<button id="continueModal" class="field btn"></button>
+	</div>
+</dialog>
+
+```
+```
+.modal {
+	width: 90%;
+	max-width: 640px;
+	color: inherit;
+}
+```
+example2
+```
+<div>
+  <h1>HTML5 Dialog Sample</h1>
+  <p>This sample shows how to use the HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</a> tag. </p>
+  <p>Check support  browser <a href="http://caniuse.com/#search=dialog">here</a>.</p>
+</div>
+
+<div>
+  <button id="open" class="blue">Show Dialog</button>
+</div>
+
+<div id="dialogBG"></div>
+
+<dialog id="dialog">
+  <h3>Are you sure?</h3>
+  <p>This is a custom confirm dialog using HTML5
+  <div>
+    <button id="ok" class="green">OK</button>
+    <button id="cancel" class="red">Cancel</button>
+  </div>
+</dialog>
+
+```
+
+```
+dialog { 
+  color: #3d3d3d;
+  background-color: #ffff91;
+  width: 35%;
+  text-align: center;
+  border: 2px solid #f3f3f3;
+  border-radius: 6px;
+  z-index: 999999;
+}
+
+dialog div { 
+  display: flex;
+}
+
+dialog::backdrop { 
+  background: rgba(0,0,0,0.9);
+}
 
 
-
+```
+---
 
 
 
