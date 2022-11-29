@@ -3859,6 +3859,1182 @@ example2
 ```
 ---
 
+# h1,h2,h3,h4,h5,h6 tag 
+
+The h1 to h6 tags are used to define HTML headings.
+
+h1 defines the most important heading. h6 defines the least important heading.
+
+Note: Only use one h1 per page - this should represent the main heading/subject for the whole page. Also, do not skip heading levels - start with h1, then use h2, and so on.
+
+example
+```
+<html>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+<p><b>Tip:</b> Use h1 to h6 elements only for headings. Do not use them just to make text bold or big. Use other tags for that.</p>
+
+</body>
+</html>
+
+```
+---
+# head tag
+The head element is a container for metadata (data about data) and is placed between the html tag and the body tag.
+
+Metadata is data about the HTML document. Metadata is not displayed.
+
+Metadata typically define the document title, character set, styles, scripts, and other meta information.
+
+The following elements can go inside the head element:
+
+title (required in every HTML document),
+style,
+base,
+link,
+meta,
+script,
+noscript,
+---
+# header tag
+The header element represents a container for introductory content or a set of navigational links.
+
+A header element typically contains:
+
+one or more heading elements (h1 - h6)
+logo or icon
+authorship information
+
+HTML example1
+```
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive bottom navigation</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Marlon</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class='bx bx-book-alt nav__icon'></i>
+                                <span class="nav__name">Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                                <span class="nav__name">Portfolio</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contactme" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Contactme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <img src="assets/img/perfil.png" alt="" class="nav__img">
+            </nav>
+        </header>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height" id="home">
+                <h2 class="section__title">Home</h2>
+            </section>
+
+            <!--=============== ABOUT ===============-->
+            <section class="container section section__height" id="about">
+                <h2 class="section__title">About</h2>
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="container section section__height" id="skills">
+                <h2 class="section__title">Skills</h2>
+            </section>
+
+            <!--=============== PORTFOLIO ===============-->
+            <section class="container section section__height" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+            </section>
+
+            <!--=============== CONTACTME ===============-->
+            <section class="container section section__height" id="contactme">
+                <h2 class="section__title">Contactme</h2>
+            </section>
+        </main>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
+```
+example2
+```
+<h2>Examples of Using the &lt;header&gt; Tag</h2>
+
+<div class="examples">
+  <div class="unstyled">
+    <h3>Default Appearance</h3>
+    <header>
+      <h4>Choose a Category</h4>
+      <nav>
+        <ul>
+          <li><a href="/html.php">HTML</a>
+            <li><a href="/css.php">CSS</a>
+              <li><a href="/sass.php">Sass</a>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="styled">
+    <h3>Styled Using CSS</h3>
+    <header>
+      <h4>Choose a Category</h4>
+      <nav>
+        <ul>
+          <li><a href="/html.php">HTML</a>
+            <li><a href="/css.php">CSS</a>
+              <li><a href="/sass.php">Sass</a>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</div>
+
+```
+CSS example2
+```
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato';
+  text-align: justify;
+  font-size: 1.25em;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.foot-link {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.more {
+  color: black;
+  text-align: right;
+  margin-top: 80px;
+}
+
+.examples .styled header {
+  font-variant: small-caps;
+  font-size: larger;
+}
+
+.examples .styled header ul{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.examples .styled header ul li{
+  margin-right: 20px;
+  background: black;
+  padding: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  
+}
+
+.examples .styled header ul li a{
+  text-decoration: none;
+  color: yellow;
+  cursor: pointer;
+  font-variant: none;
+}
+
+```
+---
+# hr tag
+The hr tag defines a thematic break in an HTML page (e.g. a shift of topic).
+
+The hr element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.
+
+example1
+```
+<hr class="hr-1">
+<hr class="hr-2">
+<hr class="hr-3">
+<hr class="hr-4">
+<hr class="hr-5">
+<hr class="hr-6">
+<hr class="hr-7">
+<hr class="hr-8">
+<hr class="hr-9">
+<hr class="hr-10">
+<hr class="hr-11">
+<hr class="hr-12">
+<hr class="hr-13">
+<hr class="hr-14">
+<hr class="hr-15">
+<hr class="hr-16">
+<hr class="hr-17">
+<hr class="hr-18">
+<hr class="hr-19">
+
+```
+CSS example1
+```
+hr {
+  background-color: #fff;
+  padding: 0;
+  margin: 80px;
+}
+
+hr.hr-1 {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr.hr-2 {
+  border: 0;
+  border-bottom: 2px dashed #eee;
+  background: #999;
+}
+
+hr.hr-3 {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #8c8c8c;
+}
+
+hr.hr-4 {
+  padding: 0;
+  border: none;
+  border-top: medium double #8c8c8c;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+hr.hr-4:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #fff;
+}
+
+hr.hr-5 {
+  border: 0;
+  border-top: 3px double #8c8c8c;
+}
+
+hr.hr-6 {
+  border: 0;
+  border-top: 2px dotted #8c8c8c;
+}
+
+hr.line-7 {
+  border: 0;
+  background-color: #fff;
+  border-top: 1px dashed #8c8c8c;
+}
+
+hr.hr-8 {
+  border: 0;
+  background-color: #fff;
+  border-top: 2px dotted #8c8c8c;
+}
+
+hr.hr-9 {
+  border: 0;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+hr.hr-10 {
+  border: 0;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+hr.hr-10:after {
+  content: '';
+  display: block;
+  margin-top: 2px;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+hr.hr-11 {
+  border: 0;
+  border-top: 1px dashed #8c8c8c;
+  border-bottom: 1px dashed #fff;
+}
+
+hr.hr-12 {
+  border: 0;
+  border-top: 1px dotted #8c8c8c;
+  border-bottom: 1px dotted #fff;
+}
+
+hr.hr-13 {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+}
+
+hr.hr-14 {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0);
+}
+
+hr.hr-15 {
+  border: 0;
+  border-top: 4px double #8c8c8c;
+  text-align: center;
+}
+
+hr.hr-15:after {
+  content: '\2665';
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8c8c;
+  font-size: 18px;
+}
+
+hr.hr-16 {
+  border: 0;
+  border-top: 1px dashed #8c8c8c;
+  text-align: center;
+}
+
+hr.hr-16:after {
+  content: '\002702';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 3px;
+  background: #fff;
+  color: #8c8c8c;
+  font-size: 18px;
+}
+
+hr.hr-17 {
+  border: 0;
+  height: 0;
+  box-shadow: 0 0 10px 1px black;
+}
+
+hr.hr-17:after {
+  content: "\00a0";
+}
+
+hr.hr-18 {
+  background-color: #fff;
+  height: 30px;
+  border: 1px solid #8c8c8c;
+  border-radius: 20px;
+}
+
+hr.hr-18:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border: 0 solid #8c8c8c;
+  border-bottom-width: 1px;
+  border-radius: 20px;
+}
+
+.hr-19 {
+  border: none;
+  height: 10px;
+  background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #8c8c8c 0) 0 5px;
+  background-color: #fff;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 10px 10px;
+}
+
+```
+HTML example2
+```
+<html>
+<body>
+
+<h1>The Main Languages of the Web</h1>
+
+<p>HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page, and consists of a series of elements. HTML elements tell the browser how to display the content.</p>
+
+<hr>
+
+<p>CSS is a language that describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work, because it can control the layout of multiple web pages all at once.</p>
+
+<hr>
+
+<p>JavaScript is the programming language of HTML and the Web. JavaScript can change HTML content and attribute values. JavaScript can change CSS. JavaScript can hide and show HTML elements, and more.</p>
+
+</body>
+</html>
+
+```
+---
+# html tag
+
+The html tag represents the root of an HTML document.
+
+The html tag is the container for all other HTML elements (except for the <!DOCTYPE> tag).
+---
+# italic tag
+
+The i tag defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.
+
+The i tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.
+
+Use the i element only when there is not a more appropriate semantic element, such as:
+
+em (emphasized text)
+strong (important text)
+mark (marked/highlighted text)
+cite (the title of a work)
+dfn (a definition term)
+
+example
+```
+<html>
+<body>
+
+<h1>The i element</h1>
+
+<p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+
+<p>The <i>RMS Titanic</i>, a luxury steamship, sank on April 15, 1912 after striking an iceberg.</p>
+
+</body>
+</html>
+
+```
+---
+
+# img tag
+The img tag is used to embed an image in an HTML page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The img tag creates a holding space for the referenced image.
+
+The img tag has two required attributes:
+
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
+
+example1 HTML
+```
+<div class="cover">
+  <img src="https://www.google.fr/images/srpr/logo11w.png" class="cover" />
+</div>
+
+```
+example1 CSS
+```
+div.cover {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+img.cover {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  overflow-x: hidden;
+}
+
+```
+example2 HTML
+```
+<div class="wrapper">
+  
+  <img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover">
+  
+  <img src="http://imgc.allpostersimages.com/images/P-473-488-90/68/6896/2GOJ100Z/posters/despicable-me-2-minions-movie-poster.jpg" alt="" class="image--cover" />
+  
+  <img src="http://static.eharmony.com/blog/wp-content/uploads/2010/04/eHarmony-Blog-profile-picture.jpg" alt="" class="image--cover" />
+  
+  <img src="https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg" alt="" class="image--cover" />
+</div>
+
+```
+CSS example2
+```
+.wrapper {
+  padding: 100px;
+}
+
+.image--cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+
+  object-fit: cover;
+  object-position: center right;
+}
+
+```
+---
+
+# input tag
+The input tag specifies an input field where the user can enter data.
+
+The input element is the most important form element.
+
+The input element can be displayed in several ways, depending on the type attribute.
+
+The different input types are as follows:
+
+input type="button"
+input type="checkbox"
+input type="color"
+input type="date"
+input type="datetime-local"
+input type="email"
+input type="file"
+input type="hidden"
+input type="image"
+input type="month"
+input type="number"
+input type="password"
+input type="radio"
+input type="range"
+input type="reset"
+input type="search"
+input type="submit"
+input type="tel"
+input type="text" (default value)
+input type="time"
+input type="url"
+input type="week"
+Look at the type attribute to see examples for each input type!
+
+HTML example1
+```
+<form>
+  <div>
+  <p>
+    <label>
+      text<br>
+    <input type="text">
+    </label>
+  </p>
+  <p>
+    <label>
+      password<br>
+    <input type="password">
+    </label>
+  </p>
+  <p>
+    <label>
+      number<br>
+    <input type="number">
+    </label>
+  </p>
+  <p>
+    <label>
+      email<br>
+    <input type="email">
+    </label>
+  </p>
+  <p>
+    <label>
+      url<br>
+    <input type="url">
+    </label>
+  </p>
+  <p>
+    <label>
+      tel<br>
+    <input type="tel">
+    </label>
+  </p>
+  <p>
+    <label>
+      search<br>
+    <input type="search">
+    </label>
+  </p>
+  <p>
+    <label>
+      textarea<br>
+      <textarea></textarea>
+    </label>
+  </p>
+  <p>
+    <label>
+      date<br>
+    <input type="date">
+    </label>
+  </p>
+  <p>
+    <label>
+      datetime<br>
+    <input type="datetime">
+    </label>
+  </p>
+  <p>
+    <label>
+      datetime-local<br>
+    <input type="datetime-local">
+    </label>
+  </p>
+  <p>
+    <label>
+      month<br>
+    <input type="month">
+    </label>
+  </p>
+  <p>
+    <label>
+      week<br>
+    <input type="week">
+    </label>
+  </p>
+  <p>
+    <label>
+      time<br>
+    <input type="time">
+    </label>
+  </p>
+  <p>
+    <label>
+      select<br>
+      <select>
+        <optgroup label="optgroup">
+          <option>option 1</option>
+          <option>option 2</option>
+          <option>option 3</option>
+        </optgroup>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      select (multiple attr)<br>
+      <select multiple>
+        <optgroup label="optgroup">
+          <option>option 1</option>
+          <option>option 2</option>
+          <option>option 3</option>
+        </optgroup>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      select (size attr)<br>
+      <select size="4">
+        <optgroup label="optgroup">
+          <option>option 1</option>
+          <option>option 2</option>
+          <option>option 3</option>
+        </optgroup>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      datalist<br>
+      <input list="datalist">
+      <datalist id="datalist">
+        <option value="option 1">
+        <option value="option 2">
+        <option value="option 3">
+      </datalist>
+    </label>
+  </p>
+  <p>
+    <label>
+      keygen<br>
+      <keygen>
+    </label>
+  </p>
+  <p>
+    <label>
+      output<br>
+      <output>123</output>
+    </label>
+  </p>
+  <p>
+    <label>
+      radio<br>
+    <input type="radio">
+    </label>
+  </p>
+  <p>
+    <label>
+      checkbox<br>
+    <input type="checkbox">
+    </label>
+  </p>
+  <p>
+    <label>
+      color<br>
+    <input type="color">
+    </label>
+  </p>
+  <p>
+    <label>
+      range<br>
+    <input type="range">
+    </label>
+  </p>
+  <p>
+    <label>
+      file<br>
+    <input type="file">
+    </label>
+  </p>
+  <p>
+    <label>
+      submit<br>
+    <input type="submit">
+    </label>
+  </p>
+  <p>
+    <label>
+      reset<br>
+    <input type="reset">
+    </label>
+  </p>
+  <p>
+    <label>
+      button (input tag)<br>
+    <input type="button" value="Button">
+    </label>
+  </p>
+  <p>
+    <label>
+      button (button tag)<br>
+      <button>Button</button>
+    </label>
+  </p>
+  </div>
+  <fieldset>
+    <legend>legend</legend>
+    fieldset
+  </fieldset>
+</form>
+
+```
+CSS example1
+```
+html, body {
+  margin:0;
+  padding:0;
+}
+
+form div {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+form p {
+  margin:1em;
+  padding:1em;
+}
+
+form label {
+  color:#999;
+  font-family:sans-serif;
+}
+
+fieldset {
+  margin:2em;
+}
+
+```
+HTML example2
+```
+<div class="container">
+  <div class="radio-tile-group">
+    <div class="input-container">
+      <input id="walk" class="radio-button" type="radio" name="radio" />
+      <div class="radio-tile">
+        <div class="icon walk-icon">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/>
+          </svg>
+        </div>
+        <label for="walk" class="radio-tile-label">Walk</label>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input id="bike" class="radio-button" type="radio" name="radio" />
+      <div class="radio-tile">
+        <div class="icon bike-icon">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+          </svg>
+        </div>
+        <label for="bike" class="radio-tile-label">Bike</label>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input id="drive" class="radio-button" type="radio" name="radio" />
+      <div class="radio-tile">
+        <div class="icon car-icon">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <label for="drive" class="radio-tile-label">Drive</label>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input id="fly" class="radio-button" type="radio" name="radio" />
+      <div class="radio-tile">
+        <div class="icon fly-icon">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.18 9"/>
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <label for="fly" class="radio-tile-label">Fly</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+CSS example2
+```
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+$primary-color: #079ad9;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  //set dimensions for invisible container
+  .input-container {
+    position: relative;
+    height:  7rem;
+    width:  7rem;
+    margin: 0.5rem;
+
+    //make actual radio input invisible
+    // + stretch to fill container
+    .radio-button {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    //default tile styles
+    .radio-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $primary-color;
+      border-radius: 5px;
+      padding: 1rem;
+      transition: transform 300ms ease;
+    }
+    .icon svg {
+      fill: $primary-color;
+      width: 3rem;
+      height: 3rem;
+    }
+    .radio-tile-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary-color;
+    }
+
+    //active tile styles
+    .radio-button:checked + .radio-tile {
+      background-color: $primary-color;
+      border: 2px solid $primary-color;
+      color: white;
+      transform: scale(1.1, 1.1);
+      
+      .icon svg {
+        fill: white;
+        background-color: $primary-color;
+      }
+      .radio-tile-label {
+        color: white;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+```
+---
+# ins tag
+The ins tag defines a text that has been inserted into a document. Browsers will usually underline inserted text.
+
+example1
+```
+<section class="style-1">
+  <h2 id="style-name">School Essay</h2>
+  <ol id="quotes">
+    <li><p>The early bird catches <del>the worm</del><ins>less sleep</ins>.</p></li>
+    <li><p>The best things in life are <del>free</del><ins>extremely expensive</ins>.</p></li>
+    <li><p>Shoot for the moon. Even if you miss, you'll <del>land among the stars</del><ins>suffocate in outer space and die</ins>.</p></li>
+    <li><p><del>Everything</del><ins>Nothing</ins> is going to be fine.</p></li>
+    <li><p>Big girls don't <del>cry</del><ins>submit to people telling them what to do</ins>.</p></li>
+  </ol>
+</section>
+
+
+<button data-style="style-1" data-title="School Essay">Style 1</button>
+<button data-style="style-2"data-title="Update on Hover">Style 2</button>
+
+```
+Example2
+```
+<html>
+<body>
+
+<h1>The ins element</h1>
+
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+</body>
+</html>
+
+```
+---
+# kbd tag
+The kbd tag is used to define keyboard input. The content inside is displayed in the browser's default monospace font.
+
+example1
+```
+<html>
+<body>
+
+<h1>The kbd element</h1>
+
+<p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+
+<p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<p>To paste copied text content stripped of formatting, use <kbd>⌘</kbd>+<kbd>Opt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.</p>
+
+```
+# label tag
+The label tag defines a label for several elements:
+
+input type="checkbox"
+
+input type="color"
+
+input type="date"
+
+input type="datetime-local"
+
+input type="email"
+
+input type="file"
+
+input type="month"
+
+input type="number"
+
+input type="password"
+
+input type="radio"
+
+input type="range"
+
+input type="search"
+
+input type="tel"
+
+input type="text"
+
+input type="time"
+
+input type="url"
+
+input type="week"
+
+meter
+
+progress
+
+select
+
+textarea
+
+ example
+```
+<html>
+<body>
+
+<h1>The label element</h1>
+
+<p>Click on one of the text labels to toggle the related radio button:</p>
+
+<form action="/action_page.php">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+```
+---
+# legend tag
+The legend tag defines a caption for the fieldset element.
+
+example
+```
+<html>
+<body>
+
+<h1>The legend element</h1>
+
+<form action="/action_page.php">
+ <fieldset>
+  <legend>Personalia:</legend>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  <input type="submit" value="Submit">
+ </fieldset>
+</form>
+
+</body>
+</html>
+
+```
+---
+
+
 
 
 
