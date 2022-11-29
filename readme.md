@@ -2830,6 +2830,1040 @@ dialog::backdrop {
 ```
 ---
 
+# Div tag
+The div tag defines a division or a section in an HTML document.
+
+The div tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.
+
+The div tag is easily styled by using the class or id attribute.
+
+Any sort of content can be put inside the div tag! 
+
+
+
+
+
+HTML
+
+example1
+```
+<div class="bubble">
+  Alright people, let's do <strong>this one last time.</strong>
+</div>
+
+<!-- bubble highlighting something  -->
+<div class="bubble bubble--highlight">
+  Play dumb
+</div>
+
+<!-- tag with the name of the main character -->
+<div class="tag">
+  <strong>Hello</strong>
+  <br />
+  my name is
+</div>
+
+```
+CSS 
+```
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #eee;
+  /* center the content in the page (mainly horizontally) */
+  display: grid;
+  place-items: center;
+  /* include the same texture used for the .bubble containers, but with notably less opacity */
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #c52754;
+  background-size: 10px, 100%;
+}
+
+/* .bubble containers: add the texture above a solid background */
+.bubble {
+  /* cap the width */
+  max-width: 500px;
+  /* give ample whitespace around and inside of the container */
+  margin: 2rem 0;
+  padding: 0.2rem 1.25rem;
+  text-align: center;
+  font-family: "Dekko", cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #fff;
+  background-size: 12px, 100%;
+  /* solid border */
+  border: 0.4rem solid #000;
+  /* position relative for the :before pseudo element */
+  position: relative;
+}
+
+/* for the highlight container change the solid backgorund to a yellow-ish hue */
+.bubble--highlight {
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.8" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23d68810"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #ffcd28;
+  background-size: 13px, 100%;
+  font-weight: 700;
+}
+/* for the highlight container always add an exclamation point */
+.bubble--highlight:after {
+  content: "!";
+}
+/* for every .bubble container add a solid background behind the container itself, slightly offset */
+.bubble:before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.15rem;
+  width: 100%;
+  height: 100%;
+  /* with the same texture, but different color, for both the texture and the background */
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(35)" opacity="1" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #000;
+  background-size: 12px, 100%;
+  border: 0.4rem solid #000;
+  z-index: -5;
+}
+
+/* for the tag, add a lot of whitespace below the string, to include the name through the pseudo element */
+.tag {
+  margin-bottom: 2rem;
+  padding: 1rem 7.5rem 11rem;
+  border-radius: 30px;
+  font-size: 2rem;
+  color: #fff;
+  background: #f8012d;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 1px 15px -7.5px #000000;
+  /* position relative for the pseudo element(s) */
+  position: relative;
+}
+.tag strong {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+/* with the :before pseudo element include a solid white background */
+.tag:before {
+  content: "";
+  position: absolute;
+  top: 9rem;
+  left: 2%;
+  width: 96%;
+  height: 9rem;
+  background: #fff;
+  /* border-radius mathing the .tag container */
+  border-radius: 0 0 30px 30px;
+}
+/* with the :after pseudo element add the name of the character */
+.tag:after {
+  content: "Peter Parker";
+  position: absolute;
+  top: 11.25rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 300;
+  font-weight: bold;
+  color: #000;
+}
+
+```
+
+HTML
+example2
+```
+<head>
+  <style>
+    div {
+      padding: 16px;
+      background-color: #00FF00;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Title with a background color</h1>
+  </div>
+</body>
+
+```
+---
+# dl tag
+
+The dl tag defines a description list.
+
+The dl tag is used in conjunction with dt (defines terms/names) and dd (describes each term/name).
+
+HTML
+
+example1
+```
+<link href='https://fonts.googleapis.com/css?family=Exo+2:400,900,300,700,500,100' rel='stylesheet' type='text/css'>
+<dl class="clone">
+<dt>First Name</dt>
+	<dd>James</dd>
+<dt>Last Name</dt>
+	<dd>Matman</dd>
+<dt>Job Title</dt>
+	<dd>Chief Sandwich Eater</dd>
+<dt>Favorite Color</dt>
+	<dd>Lettuce Green</dd>
+<dt>Wars or Trek?</dt>
+	<dd>Trek</dd>
+<dt>Team Name</dt>
+	<dd>Digby Green</dd>
+<dt>Date of Birth</dt>
+	<dd>January 13, 1979</dd>
+<dt>Dream Vacation City</dt>
+	<dd>Gotham City</dd>
+<dt>GPA</dt>
+	<dd>3.1</dd>
+<dt>Arbitrary Data</dt>
+	<dd>RBX-12</dd>
+</dl>
+	
+<!-- 
+	definition lists as table rows. it's turtles all the way down. 
+!-->
+<dl>
+<dt>First Name</dt>
+	<dd>James</dd>
+<dt>Last Name</dt>
+	<dd>Matman</dd>
+<dt>Job Title</dt>
+	<dd>Chief Sandwich Eater</dd>
+<dt>Favorite Color</dt>
+	<dd>Lettuce Green</dd>
+<dt>Wars or Trek?</dt>
+	<dd>Trek</dd>
+<dt>Porn Name</dt>
+	<dd>Digby Green</dd>
+<dt>Date of Birth</dt>
+	<dd>January 13, 1979</dd>
+<dt>Dream Vacation City</dt>
+	<dd>Gotham City</dd>
+<dt>GPA</dt>
+	<dd>3.1</dd>
+<dt>Arbitrary Data</dt>
+	<dd>RBX-12</dd>
+</dl>
+
+<dl>
+<dt>First Name</dt>
+	<dd>The</dd>
+<dt>Last Name</dt>
+	<dd>Tick</dd>
+<dt>Job Title</dt>
+	<dd>Crimefighter Sorta</dd>
+<dt>Favorite Color</dt>
+	<dd>Blue</dd>
+<dt>Wars or Trek?</dt>
+	<dd>Wars</dd>
+<dt>Porn Name</dt>
+	<dd>John Smith</dd>
+<dt>Date of Birth</dt>
+	<dd>July 19, 1968</dd>
+<dt>Dream Vacation City</dt>
+	<dd>Athens</dd>
+<dt>GPA</dt>
+	<dd>N/A</dd>
+<dt>Arbitrary Data</dt>
+	<dd>Edlund, Ben (July 1996).</dd>
+</dl>
+
+<dl>
+<dt>First Name</dt>
+	<dd>Jokey</dd>
+<dt>Last Name</dt>
+	<dd>Smurf</dd>
+<dt>Job Title</dt>
+	<dd>Giving Exploding Presents </dd>
+<dt>Favorite Color</dt>
+	<dd>Smurflow</dd>
+<dt>Wars or Trek?</dt>
+	<dd>Smurf</dd>
+<dt>Porn Name</dt>
+	<dd>Smurflane Smurfmutt</dd>
+<dt>Date of Birth</dt>
+	<dd>Smurfuary Smurfteenth, 1945 </dd>
+<dt>Dream Vacation City</dt>
+	<dd>New Smurf City </dd>
+<dt>GPA</dt>
+	<dd>4.Smurf </dd>
+<dt>Arbitrary Data</dt>
+	<dd>One</dd>
+</dl>
+
+<dl>
+<dt>First Name</dt>
+	<dd>Cindy</dd>
+<dt>Last Name</dt>
+	<dd>Beyler </dd>
+<dt>Job Title</dt>
+	<dd>Sales Representative </dd>
+<dt>Favorite Color</dt>
+	<dd>Red </dd>
+<dt>Wars or Trek?</dt>
+	<dd>Wars </dd>
+<dt>Porn Name</dt>
+	<dd>Lori Quivey</dd>
+<dt>Date of Birth</dt>
+	<dd>July 5, 1956 </dd>
+<dt>Dream Vacation City</dt>
+	<dd>Paris </dd>
+<dt>GPA</dt>
+	<dd>3.4 </dd>
+<dt>Arbitrary Data</dt>
+	<dd>3451</dd>
+</dl>
+
+<dl>
+<dt>First Name</dt>
+	<dd>Captain </dd>
+<dt>Last Name</dt>
+	<dd>Cool </dd>
+<dt>Job Title</dt>
+	<dd>Tree Crusher </dd>
+<dt>Favorite Color</dt>
+	<dd>Blue</dd>
+<dt>Wars or Trek?</dt>
+	<dd>Wars </dd>
+<dt>Porn Name</dt>
+	<dd>Steve 42nd</dd>
+<dt>Date of Birth</dt>
+	<dd>December 13, 1982 </dd>
+<dt>Dream Vacation City</dt>
+	<dd>Las Vegas </dd>
+<dt>GPA</dt>
+	<dd>1.9 </dd>
+<dt>Arbitrary Data</dt>
+	<dd>Under the couch</dd>
+</dl>
+</div>
+
+```
+CSS example1
+```
+dt, dd {
+	margin:0;
+	padding:0;
+	width:49%;
+	float:left;
+}
+dt{
+  font-weight:bold;
+}
+
+dl:nth-of-type(odd) dt, dl:nth-of-type(odd) dd { 
+	background: #ffe8f1; 
+}
+
+.clone {
+	display:none;
+}
+
+@media (min-width: 800px) {
+
+	dt, dd {
+		padding:.25em;
+		border-right:1px solid #c00;
+		border-bottom:1px solid #c00;
+		width:auto;
+		float:none;
+	}
+	
+	.faux-table {
+		display:table;
+		position:relative;
+		border-top:1px solid #c00;
+		border-left:1px solid #c00;
+	}
+	
+	dt, dl.clone dd {
+		display:none;
+	}
+	dl, dl.clone {
+		display:table-row;
+	}
+	dl.clone dt, dd {
+		display:table-cell;
+	}
+	
+	dl.clone dt {
+		color:#ddd;
+		background:#c00;
+		text-align:center;
+		font-weight:bold;
+	}
+}
+
+```
+
+HTML example2
+```
+<html>
+<body>
+
+<h1>The dl, dd, and dt elements</h1>
+
+<p>These three elements are used to create a description list:</p>
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+</body>
+</html>
+
+```
+---
+
+# dt tag
+The dt tag defines a term/name in a description list.
+
+The dt tag is used in conjunction with dl (defines a description list) and dd (describes each term/name).
+
+EXAMPLE
+```
+<html>
+<body>
+
+<h1>The dl, dd, and dt elements</h1>
+
+<p>These three elements are used to create a description list:</p>
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+</body>
+</html>
+
+```
+---
+
+# em tag
+The em tag is used to define emphasized text. The content inside is typically displayed in italic.
+
+A screen reader will pronounce the words in em with an emphasis, using verbal stress.
+
+example1 
+```
+<html>
+<body>
+
+<h1>The em element</h1>
+
+<p>You <em>have</em> to hurry up!</p>
+
+<p>We <em>cannot</em> live like this.</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<head>
+<style>
+em { 
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<p>An em element is displayed like this:</p>
+
+<em>Some emphasized text</em>
+
+<p>Change the default CSS settings to see the effect.</p>
+
+</body>
+</html>
+
+```
+---
+
+# embed tag
+The embed tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application.
+
+example1
+```
+<html>
+<body>
+
+<h1>The embed element</h1>
+
+<embed type="text/html" src="snippet.html"  width="500" height="200">
+
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<body>
+
+<embed type="video/webm" src="movie.mp4" width="400" height="300">
+ 
+</body>
+</html>
+
+```
+---
+# fieldset tag
+The fieldset tag is used to group related elements in a form.
+
+The fieldset tag draws a box around the related elements.
+
+example1
+```
+<html>
+<body>
+
+<h1>The fieldset element</h1>
+
+<form action="/action_page.php">
+ <fieldset>
+  <legend>Personalia:</legend>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  <input type="submit" value="Submit">
+ </fieldset>
+</form>
+
+</body>
+</html>
+
+```
+example2 HTML
+```
+<h1> Soccer Registration </h1>
+
+<form>
+  <label>Name: </label>
+    <input type="text" name="name">
+  <label>Email: </label>
+    <input type="email" name="_replyto">
+
+
+  <fieldset>
+      <legend>Experience</legend>
+      <input type="radio" name="radExperience" id="radBeginner"/>
+      <label for="radBeginner">Beginner</label>
+      <input type="radio" name="radExperience"
+id="radIntermediate"/>
+      <label for="radIntermediate">Intermediate</label>
+      <input type="radio" name="radExperience" id="radExperienced"/>
+     <label for="radExperienced">Experienced</label>
+  </fieldset>
+  <input id="send-button" type="submit" value="Send">
+</form>
+
+```
+example2 CSS 
+```
+form {
+  max-width: 200px;
+  padding: 20px;
+  font-family: Arial;
+}
+
+input {
+  display: block;
+  padding: 4px;
+}
+
+#send-button {
+  color: #fff;
+  margin: 20px;
+  background-color: #456789;
+  border-radius: 10%;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  
+}
+
+fieldset {
+  margin: 15px;
+  background-color: #ccc;
+  border: none;
+}
+
+```
+---
+# figcaption element
+The figcaption tag defines a caption for a figure element.
+
+The figcaption element can be placed as the first or last child of the figure element.
+
+HTML example1
+```
+<figure>
+  <img src="https://picsum.photos/300/300?random" alt="Rendom picture">
+  <figcaption>Looking for something? Rendom picture here.</figcaption>
+</figure>
+
+```
+CSS example1
+```
+@import url('https://fonts.googleapis.com/css?family==Encode+Sans+Condensed');
+body { 
+  background: #ffffff; 
+  font: 14px/1.6 'Encode Sans Condensed', sans-serif;
+}
+
+
+figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    display: block;
+    border: 0px solid #00b3b3;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0), 0 0 10px 4px rgba(0, 0, 0, 0.18);
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    color: #e8e8e8;
+    padding: 20px;
+    transform: translate(-75%, -50%);
+    background-color: #2b2b2b;
+    border: 4px solid #505050;
+    font-weight: 500;
+    max-width: 300px;
+    a{
+      color: #e8e8e8;
+      text-decoration: none;
+      border-bottom: 2px solid #a0a0a0;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      top: calc(100% - 25px);
+      left: calc(100% + 3px);
+      transform: rotate(45deg);
+      transform-origin: left top;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 50px solid #505050;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(100% - 22px);
+      left: calc(100% - 1px);
+      transform: rotate(45deg);
+      transform-origin: left top;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 40px solid #2b2b2b;
+    }
+  }
+}
+```
+
+Example2 HTML
+```
+<figure>
+<img src="http://cssinhtml.com/wp-content/uploads/2016/05/user_image.jpg" alt="This is a figure image">
+<figcaption>This is the caption of the Image</figcaption>
+</figure>
+<br>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+---
+
+# figure tag
+
+The figure tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+While the content of the figure element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+
+Tip: The figcaption element is used to add a caption for the figure element.
+
+example
+```
+<html>
+<body>
+
+<h1>The figure and figcaption element</h1>
+
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>
+
+</body>
+</html>
+
+```
+---
+# footer element
+
+The footer tag defines a footer for a document or section.
+
+A footer element typically contains:
+
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+You can have several footer elements in one document.
+
+HTML example1
+```
+<div class="wrap">
+  <header>
+    <a href="#">Boo</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h1>Boogey Monster</h1>
+      <hr/>
+      <p>A gorgeous layout that caught my eye on Dribbble.<br/>So I had to give it a go.<br/>Inspired by <a href="https://dribbble.com/shots/2897240-DESIGN-HOUSE">Baoan</a>.</p>
+    </section>
+    
+    <section class="content">
+      <h2>Bears</h2>
+      <p>Viral whatever umami, mlkshk microdosing kombucha sartorial chicharrones 8-bit meditation twee next level. Tofu wayfarers retro forage kale chips humblebrag, occupy banh mi +1 selvage williamsburg aesthetic. Paleo thundercats keytar, tousled literally banjo affogato heirloom bespoke leggings post-ironic. Tofu selfies swag hoodie, pabst ethical heirloom. Vinyl tumblr street art butcher mlkshk. Letterpress small batch keytar trust fund. Aesthetic vice mustache health goth dreamcatcher.</p>
+      <h2>Beats</h2>
+      <p>Food truck stumptown brunch, plaid kogi yr tousled squid art party. Aesthetic kogi try-hard asymmetrical humblebrag. Disrupt seitan raw denim intelligentsia selfies, migas poutine messenger bag. Microdosing bushwick salvia aesthetic, trust fund bitters locavore lo-fi shoreditch. Heirloom fingerstache stumptown, 3 wolf moon actually literally franzen everyday carry cliche church-key tote bag put a bird on it vegan pug truffaut. Heirloom cornhole small batch kombucha, tote bag asymmetrical jean shorts brooklyn DIY skateboard kale chips biodiesel. Whatever hoodie tousled, mlkshk typewriter shabby chic knausgaard twee occupy cold-pressed tote bag sustainable food truck VHS thundercats.</p>
+      <h2>Battlestar Galactica</h2>
+      <p>Shabby chic drinking vinegar blog, waistcoat kombucha direct trade tofu aesthetic mlkshk everyday carry meh bitters. Photo booth dreamcatcher chia flannel, single-origin coffee waistcoat chambray mustache truffaut hella. Banjo VHS readymade 8-bit actually. Vice narwhal pinterest intelligentsia, tacos cray chicharrones tilde dreamcatcher mlkshk kombucha distillery gochujang. Crucifix banjo mustache messenger bag cray migas. Gentrify occupy slow-carb banh mi hoodie ramps. Cardigan fixie hammock synth mumblecore lomo.</p>
+    </section>
+  
+    <p>Content provided by the ever so charming <a href="http://www.hipsum.co">Hipsum</a>.</p>
+  
+  </main>
+</div> <!-- /content -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="wrapper">
+    <a href="https://andreasvirkus.github.io">
+      <div class="logo">
+        <div class="element logo-text pre-test" id="sdew_1" ><p>a</p></div> 
+        <div class="element logo-text pre-test selected" id="sdew_2" ><p>J</p></div> 
+        <div class="element logo-text pre-test" id="sdew_3" ><p>v</p></div>
+      </div>
+    </a>
+  </div>
+</footer>
+
+```
+CSS example1
+```
+#footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer:hover #sdew_2 p {
+  color: #e16036;
+}
+
+#footer-tag {
+  color: #fff;
+}
+
+#footer-tag a {
+  color: #fff;
+}
+
+#footer-tag a:hover {
+  color: #e16036;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-15px, 0);
+  color: #000;
+  font-family: Josefin Slab, serif;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-size: 64px;
+}
+
+.logo p {
+  font-family: Josefin Slab, serif;
+}
+
+.logo:hover #sdew_2 p {
+  color: #e16036;
+}
+
+.element {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.element p {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+}
+
+#sdew_1 {
+  font-size: 64px;
+  color: #fff;
+  top: 1px;
+  left: 50px;
+}
+
+#sdew_2 {
+  font-size: 64px;
+  color: #fff;
+  top: 30px;
+  left: 77px;
+}
+
+#sdew_2 p {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#sdew_3 {
+  font-size: 64px;
+  color: #fff;
+  top: 40px;
+  left: 92px;
+}
+
+```
+HTML example2
+```
+<div class="wrap">
+  <div class="container">
+  <div class="box">
+    <div class='smoke'>
+    </div>
+  </div>
+</div>
+</div> <!-- /content -->
+
+<!-- Footer -->
+<div id="footer">
+  <div class="wrapper">
+    <a href="https://andreasvirkus.github.io">
+      <div class="logo">
+        <div class="element logo-text pre-test" id="sdew_1" ><p>a</p></div> 
+        <div class="element logo-text pre-test selected" id="sdew_2" ><p>J</p></div> 
+        <div class="element logo-text pre-test" id="sdew_3" ><p>v</p></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+```
+CSS example2
+```
+#footer {
+  position: relative;
+  background: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer:hover #sdew_2 p {
+  color: #e16036;
+}
+
+#footer-tag {
+  color: #fff;
+}
+
+#footer-tag a {
+  color: #fff;
+}
+
+#footer-tag a:hover {
+  color: #e16036;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-15px, 0);
+  color: #000;
+  font-family: Josefin Slab, serif;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-size: 64px;
+}
+
+.logo p {
+  font-family: Josefin Slab, serif;
+}
+
+.logo:hover #sdew_2 p {
+  color: #e16036;
+}
+
+.element {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.element p {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+}
+
+#sdew_1 {
+  font-size: 64px;
+  color: #fff;
+  top: 1px;
+  left: 50px;
+}
+
+#sdew_2 {
+  font-size: 64px;
+  color: #fff;
+  top: 30px;
+  left: 77px;
+}
+
+#sdew_2 p {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#sdew_3 {
+  font-size: 64px;
+  color: #fff;
+  top: 40px;
+  left: 92px;
+}
+
+```
+---
+# form tag
+The form tag is used to create an HTML form for user input.
+
+The form element can contain one or more of the following form elements:
+
+input
+textarea
+button
+select
+option
+optgroup
+fieldset
+label
+output
+
+example1
+```
+<form>
+  <label for="foo">foo </label>
+  <input type="text" id="foo" required>*
+  <input id="saveFoo" type="submit" value="save">
+</form>
+<div>valid? <span id="valid"></span></div>
+<div>u entered: <span id="output"></span></div>
+<div>feedback: <span id="feedback"></span></div>
+
+```
+example2
+```
+<h3>iOS Keyboard: Bottom Right Button Variants</h3>
+
+<!-- Keyboard w/ Return Button -->
+<label for="username">Username</label>
+<input id="username" class="input-returnKB" type="text" name="username2" value="" placeholder="Username Return" tabindex="1" autocorrect="off" autocapitalize="none">
+
+<!-- Keyboard w/ GO Button -->
+<form name="login" method="post" action="#">
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" value="" placeholder="Password GO" tabindex="2">
+</form>
+
+<!-- Description -->
+<p>iOS Mobile Safari detects which keyboard to present a user by the structure of the HTML. There are two iOS Mobile Safari keyboard variants that have to do with the bottom right button. The button variations are "return" or "Go". "Go" is triggered by having a "form" tag with and defined "action".</p>
+
+```
+---
+
+
+
+
+
+
 
 
 
