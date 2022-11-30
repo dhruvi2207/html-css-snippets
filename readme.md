@@ -5034,6 +5034,1486 @@ example
 ```
 ---
 
+# LI tag
+The li tag defines a list item.
+
+The li tag is used inside ordered lists(ol), unordered lists (ul), and in menu lists menu.
+
+In ul and menu, the list items will usually be displayed with bullet points.
+
+In ol, the list items will usually be displayed with numbers or letters.
+
+example1
+```
+<ul>
+  <li>One lorem ipsum dolor sit amet</li><!--
+  --><li>Two</li><!--
+  --><li>Three</li><!--
+  --><li><p>Four</p></li><!--
+  --><li><img src="http://placehold.it/50/50" /></li>
+</ul>
+
+```
+example2
+
+HTML
+```
+<ul>
+ <li class="link"><a href="#">Alpha Link</a></li>
+ <li class="link"><a href="#">Beta Link</a></li>
+ <li class="link"><a href="#">Charlie Link</a></li>
+ <li class="link"><a href="#">Delta Link</a></li>
+ <li class="link"><a href="#">Echo Link</a></li>
+ <li class="link"><a href="#">Foxtrot Link</a></li>
+ <li class="link"><a href="#">Golf Link</a></li>
+</ul>
+
+```
+CSS example2
+```
+.link{
+  text-decoration: none;
+    border-color: #3AC162;
+	  background-color: #5FCF80;
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 19px 39px 18px;
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+  }
+  &.active{
+    background-color: #ED5A5A;
+    border-color: #EA4343;
+  }
+}
+
+```
+---
+# link tag
+The link tag defines the relationship between the current document and an external resource.
+
+The link tag is most often used to link to external style sheets or to add a favicon to your website.
+
+The link element is an empty element, it contains attributes only.
+
+example1 HTML
+```
+<div id="app">
+  <transition mode="out-in">
+    <router-view :key="$route.path"></router-view>
+  </transition>
+  <ul>
+    <router-link tag="li" to="/" exact><a>Home</a></router-link>
+    <router-link tag="li" to="/page/1"><a>Page 1</a></router-link>
+    <router-link tag="li" to="/page/2"><a>Page 2</a></router-link>
+    <router-link tag="li" to="/user/mimi"><a>Mimi</a></router-link>
+    <router-link tag="li" to="/user/mintuno"><a>Mintuno</a></router-link>
+  </ul>
+</div>
+
+```
+CSS example1
+```
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.router-link-active {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.box {
+  padding: 1em;
+  border: 1px solid #333;
+}
+
+.home {
+  color: #900;
+  border-color: #900;
+  background-color: #fcc;
+}
+
+.page {
+  color: #090;
+  border-color: #090;
+  background-color: #cfc;
+}
+
+.user {
+  color: #009;
+  border-color: #009;
+  background-color: #ccf;
+}
+
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-active, .v-leave-active{
+  transition: all 250ms ease-in;
+}
+
+```
+
+HTML example2
+```
+<h1>Header</h1>
+<p>Lorem ipsum&hellip;</p>
+<p>More information can be found at <a href="http://kurtzenisek.com/p/smart-web-banner/" target="_blank">http://kzeni.com/p/smart-web-banner/</a>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://kurtzenisek.com/p/smart-web-banner/jQuery.smartWebBanner.js"></script>
+
+```
+---
+
+# main tag
+The main tag specifies the main content of a document.
+
+The content inside the main element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+
+HTML Example1
+```
+<body>
+  <nav id="toc">
+  </nav>
+  <main>
+    <h1>New Horizons</h1>
+    <p>
+      Live life at your own pace as you garden, fish, decorate, hunt for bugs and fossils, get to know the animal residents, and more. The time of day and seasons match real life, so something is happening on your island whether you’re there or not.
+    </p>
+    <p>Oh--just watch out for those shifty racoons.</p>
+    <h2>Tools</h2>
+    <p>New Horizons has all sorts of tools that you can use to your disposal!</p>
+    <h3>Shovel</h3>
+    <p>This tool's versatility knows no bounds! Hole digging, rock smacking, tree uprooting goodness!</p>
+    <h3>Bug Net</h3>
+    <p>Catch some bugs--if you are into that kind of thing.</p>
+    <h3>Slingshot</h3>
+    <p>Make presents fall from the sky! Just watch out for the river!</p>
+    <h3>Fishing Rod</h3>
+    <p>After all that shovel work its nice to take a load of, craft a nice coconut juice, and fish.</p>
+    <h3>Ladder</h3>
+    <p>For those annoying cliffs.</p>
+    <h3>Axe</h3>
+    <p>For choppin' trees--just watch out for them bees!</p>
+    <h3>Vaulting Pole</h3>
+    <p>For those like me, that are too poor to afford a bridge.</p>
+    <h3>Watering Can</h3>
+    <p>Those flowers won't crossbreed themselves.</p>
+    <h2>Flower Crossbreeding</h2>
+    <h3>Lilies</h3>
+    <ul>
+      <li>Red + Red = Black</li>
+      <li>Yellow + Red = Orange</li>
+      <li>Red + White = Pink</li>
+    </ul>
+    <h3>Roses</h3>
+    <ul>
+      <li>Red + Red = Black</li>
+      <li>Red + White = Pink</li>
+      <li>Yellow + Red = Orange</li>
+      <li>White + White = Purple</li>
+    </ul>
+    <h3>Mums</h3>
+    <ul>
+      <li>White + Red = Pink</li>
+      <li>White + White = Purple</li>
+      <li>Purple + Purple = Green</li>
+    </ul>
+    <h3>Pansies</h3>
+    <ul>
+      <li>Red + Red = Purple</li>
+      <li>White + White = Blue</li>
+      <li>Yellow + Red = Orange</li>
+      <li>Blue + Blue = Purple</li>
+      <li>Red + Red = Purple</li>
+    </ul>
+    <h3>Windflower</h3>
+    <ul>
+      <li>Orange + Red = Pink</li>
+      <li>Orange + White = Blue</li>
+      <li>White + White = Blue</li>
+      <li>Blue + Pink = Purple</li>
+      <li>Blue + Blue = Purple</li>
+    </ul>
+    <h3>Hyacinths</h3>
+    <ul>
+      <li>Red + White = Pink</li>
+      <li>White + White = Blue</li>
+      <li>Red + Yellow = Orange</li>
+      <li>Blue + Blue = Purple</li>
+    </ul>
+    <h3>Cosmos</h3>
+    <ul>
+      <li>Yellow + Red = Orange</li>
+      <li>Red + White = Pink</li>
+      <li>Red + Red = Black</li>
+    </ul>
+    <h3>Tulips</h3>
+    <ul>
+      <li>Red + Red = Black</li>
+      <li>Red + Yellow = Orange</li>
+      <li>Red + White = Pink</li>
+      <li>Black + Black = Purple</li>
+    </ul>
+  </main>
+</body>
+
+```
+CSS example1
+```
+body {
+  display: flex;
+  flex-flow: space-between;
+  height: 100vh;
+  font-family: "Rubik";
+  margin: 0;
+  color: #333344;
+  line-height: 1.53em;
+  font-size: 1.2rem;
+  background-color: #efeeff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik Mono One";
+  font-weight: 300;
+  margin-top: 3rem;
+  color: #484866;
+}
+
+main {
+  flex: 3 3 100%;
+  overflow: auto;
+  padding: 2rem 3rem;
+}
+
+nav {
+  flex: 1 1 300px;
+  background-color: #333344;
+  min-width: 240px;
+  paddings: 1rem;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+p {
+  max-width: 700px;
+}
+
+a {
+  color: #eeeeff;
+  text-decoration: none;
+}
+
+.active {
+  color: #ff8888;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.25rem;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #eeeeff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The main element</h1>
+
+<main>
+  <h1>Most Popular Browsers</h1>
+  <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+
+  <article>
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+  </article>
+
+  <article>
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+  </article>
+
+  <article>
+    <h2>Microsoft Edge</h2>
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+  </article>
+</main>
+
+</body>
+</html>
+
+```
+---
+# map tag
+The map tag is used to define an image map. An image map is an image with clickable areas.
+
+The required name attribute of the map element is associated with the img's usemap attribute and creates a relationship between the image and the map.
+
+example
+```
+<html>
+<body>
+
+<h1>The map and area elements</h1>
+
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+</body>
+</html>
+
+```
+---
+# mark tag
+
+The mark tag defines text that should be marked or highlighted.
+
+example
+```
+<html>
+<body>
+
+<h1>The mark element</h1>
+
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+
+</body>
+</html>
+
+```
+---
+The meta tag defines metadata about an HTML document. Metadata is data (information) about data.
+
+meta tags always go inside the head element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+
+Metadata will not be displayed on the page, but is machine parsable.
+
+Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+
+There is a method to let web designers take control over the viewport (the user's visible area of a web page), through the meta tag (See "Setting The Viewport" example below).
+
+Example1
+
+HTML
+```
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<!-- ---------------- -->
+  <main class="main">
+    
+    <section class="section section--pos">
+      <div class="iphone"><span class="iphone__txt">X</span></div>
+      <h1 class="heading heading--1">
+        <span style="font-size: .5em">Tutorial</span><br>
+        Designing for the Notch
+      </h1>
+      <p style="text-align: center;">
+        <i>Note: As of iOS 11.2, "const()" has been removed in favor of the standardized "env()".</i>
+      </p>
+    </section>
+    <section class="section section--neg">
+      <h2 class="heading heading--2">Changing the viewport meta tag</h2>
+      <div class="box">
+        <p class="paragraph">
+          First of all you need to add a declaration to your meta viewport content attribute:
+        </p>
+        <code class="code">
+          <span class="color--opacity-0-5">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, </span>viewport-fit=cover<span class="color--opacity-0-5">"&gt;</span>
+        </code>
+      </div>
+    </section>
+    <section class="section section--pos">
+      <h2 class="heading heading--2">Changing the CSS</h2>
+      <div class="grid grid--split-33 grid--gut-20">
+        
+        <div class="grid__item">
+          <div class="box">
+            <h3 class="heading heading--3">The CSS</h3>
+            <p class="paragraph">
+              Since the code above will cause the painted area to fill the entire width of an iPhone X – we need to push the padding according to the device's "safe area".<br>
+              You do this using the <del>constant [ const() ]</del> <ins>environment variable [ env() ]</ins>...<br>
+              For areas that does not already require padding you can add:
+            </p>
+            <code class="code">
+              <pre class="pre"><span class="color--opacity-0-5">.elem {</span>
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+<span class="color--opacity-0-5">}</span></pre>
+            </code>
+          </div>
+        </div>
+        
+        <div class="grid__item">
+          <div class="box">
+            <h3 class="heading heading--3">The falback</h3>
+            <p class="paragraph">
+              Also, don't forget to define the fallback values for the devices that don't support <del>constant()</del> <ins>env()</ins> – in the case of no padding:
+            </p>
+            <code class="code">
+              <pre class="pre"><span class="color--opacity-0-5">.elem {</span>
+  padding-right: 0;
+  padding-right: env(safe-area-inset-right);
+  padding-left: 0;
+  padding-left: env(safe-area-inset-left);
+<span class="color--opacity-0-5">}</span></pre>
+            </code>
+          </div>
+        </div>
+        
+        <div class="grid__item">
+          <div class="box">
+            <h3 class="heading heading--3">The combination</h3>
+            <p class="paragraph">
+              In case your element normally has 20 px padding, you can use the built-in function calc() to calculate the correct combined padding:
+            </p>
+            <code class="code">
+              <pre class="pre"><span class="color--opacity-0-5">.elem {</span>
+  padding-right: 20px;
+  padding-right: calc( 20px + env(safe-area-inset-right) );
+  padding-left: 20px;
+  padding-left: calc( 20px + env(safe-area-inset-left) );
+<span class="color--opacity-0-5">}</span></pre>
+            </code>
+          </div>
+        
+      </div>
+    </section>
+    
+  </main>
+  
+<!-- ---------------- -->
+</body>
+</html>
+
+
+```
+CSS 
+
+example1
+```
+@mixin pad() {
+  
+}
+
+$col_a: #fb3;
+$col_b: #333;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.9);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #333;
+}
+
+
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.section {
+  // Notch styling
+  padding: 50px 20px;
+  padding-right: calc(20px + constant(safe-area-inset-right));
+  padding-left: calc(20px + constant(safe-area-inset-left));
+  
+  // Arbitrary styling
+  width: 100%;
+  color: #333;
+  
+  &--pos {
+    background: $col_a;
+    color: $col_b;
+  }
+  &--neg {
+    background: $col_b;
+    color: $col_a;
+  }
+}
+.heading {
+  text-align: center;
+  &--1 {
+    margin: 0.25em 0;
+    font-size: 2em;
+    color: $col_b;
+  }
+}
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+
+  
+  &__item {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 20px;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    
+    & > * {
+      flex: 0 0 auto;
+    }
+  }
+  
+  &--split-50 &__item {
+    width: 50%;
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+  &--split-33 &__item {
+    width: 33.3333%;
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+  &--gut-20 {
+    margin: -10px;
+  }
+  &--gut-20 &__item {
+    padding: 10px
+  }
+}
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+}
+.paragraph {
+  
+}
+.code {
+  display: block;
+  margin: .5em 0;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.1);
+  font-size: .9em;
+}
+.pre {
+  white-space: pre-wrap;
+  font-size: 1em;
+}
+.iphone {
+  $iphone_bg: #333;
+  
+  position: relative;
+  margin: .25em auto;
+  
+  width: 80px;
+  height: 140px;
+  border: 5px solid $iphone_bg;
+  border-radius: 10px;
+  background: #fff;
+  color: $iphone_bg;
+  line-height: 130px;
+  font-size: 60px;
+  font-weight: normal;
+  text-align: center;
+  overflow: hidden;
+  
+  animation: iphone 3s linear 0s infinite normal;
+  
+  &__txt {
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+  
+  &::before, &::after {
+    content: '';
+    z-index: 1;
+  }
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60%;
+    padding-top: 10%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $iphone_bg;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    background-color: $col_a;
+    animation: content 3s linear 0s infinite normal;
+    z-index: 1;
+  }
+}
+@keyframes content_OLD {
+  0%, 20%, 45%, 55%, 90%, 100% { top: 0%; bottom: 0%; }
+  21%, 35%, 65%, 89% { top: 10%; bottom: 10%; }
+}
+@keyframes iphone_OLD {
+  0%, 10%, 90%, 100% { transform: rotate(0deg); }
+  20%, 80% { transform: rotate(-90deg); }
+}
+@keyframes iphone_text_OLD {
+  0%, 20%, 90%, 100% { transform: rotate(0deg); }
+  25%, 85% { transform: rotate(90deg); }
+}
+@keyframes content {
+  0%, 20%, 45%, 55%, 80%, 100% { top: 0%; bottom: 0%; }
+  21%, 35%, 65%, 79% { top: 10%; bottom: 10%; }
+}
+@keyframes iphone {
+  0%, 10%, 90%, 100% { transform: rotate(0deg); }
+  20%, 80% { transform: rotate(-90deg); }
+}
+.footer {
+  
+}
+.color {
+  &--opacity-0-5 {
+    opacity: 0.5;
+  }
+}
+
+```
+example2
+```
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<p>All meta information goes in the head section...</p>
+
+</body>
+</html>
+
+```
+---
+
+# meter tag
+The meter tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge.
+
+Examples: Disk usage, the relevance of a query result, etc.
+
+example1
+```
+<html>
+<body>
+
+<h1>The meter element</h1>
+
+<p>The meter element is used to display a gauge:</p>
+
+<label for="disk_c">Disk usage C:</label>
+<meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+
+<label for="disk_d">Disk usage D:</label>
+<meter id="disk_d" value="0.6">60%</meter>
+
+<p><strong>Note:</strong> The meter tag is not supported in Edge 12 (or earlier).</p>
+
+</body>
+</html>
+
+```
+HTML
+example2
+```
+<h1>OSX-style Disk Usage <xmp>..using html5 <meter></xmp></h1>
+
+<p>
+  Macintosh HD <span class="free-space">64.54 GB free out of 120.47 GB</span></p>
+
+<meter value="55.93" min="0" max="120.47" title="GB">
+  <div class="meter-gauge">
+    <span style="width: 46.42%;">Disk Usage - 55.93GB out of 120GB</span>
+  </div>
+</meter>  
+  
+<ul class="swatch">
+  <li class="swatch__elem">Audio <span class="used-space">670.5 MB</span></li>
+  <li class="swatch__elem">Movies <span class="used-space">10.1 GB</span></li>
+  <li class="swatch__elem">Photos <span class="used-space">25.19 GB</span></li>
+  <li class="swatch__elem">Apps <span class="used-space">19.31 GB</span></li>
+  <li class="swatch__elem">Other <span class="used-space">660.5 MB</span></li>
+</ul>
+
+```
+CSS example2
+```
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  
+  font-family: "Roboto", "Lucida Grande", "Lucida", sans-serif;
+  margin: 5em auto;
+  background: radial-gradient(#f9f9f9 20%, #ddd 80%);
+  width: 550px;
+}
+
+h1 {
+  
+  font-size: 1.5em;
+  margin: 0 auto 2.5em;
+  font-weight: 700;
+}
+
+xmp {
+  
+  font-family: Consolas, Monaco, monospace;
+  font-size: 85%;
+  color: #666;
+  font-weight: 400;
+}
+
+meter {
+  
+  display: block;
+  margin: 0 auto;
+  
+  width: 550px;
+  height: 25px;
+  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  
+  /* Firefox */
+  background: none; /* Required to get rid of the default background prop. */
+  background-color: whiteSmoke;  
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+meter::-webkit-meter-bar {
+  
+  background: none; /* Important to get rid of default background. */
+  background-color: whiteSmoke;
+  
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+meter::-webkit-meter-optimum-value {
+  
+  transition: width .5s;
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+}
+
+meter::-webkit-meter-optimum-value:hover {
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 20%, 
+                                     #e6d450 20%,
+                                     #e6d450 40%,
+                                     #f28f68 40%,
+                                     #f28f68 60%,
+                                     #cf82bf 60%,
+                                     #cf82bf 80%,
+                                     #719fd1 80%,
+                                     #719fd1 100%);
+  
+  transition: width .5s;
+  width: 100% !important; /* !important keyword used to override the inline style in ebkit browsers. */
+}
+
+meter::-moz-meter-bar {
+  
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+}
+
+p {
+ 
+  margin: 0 auto ;
+  width: 550px;
+  line-height: 2.5;
+}
+
+.free-space {
+  
+  float: right;
+}
+
+.swatch {
+  
+  margin: 0; padding:0;
+  margin: 5em auto;
+  list-style-type: none;
+  width: 550px;
+  display: block;
+  position: relative;
+}
+
+.swatch::before {
+  
+  content: '';
+  width: 100%;
+  height: 10px;
+  outline: 0px solid #000;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-radius: 2px;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 20%, 
+                                     #e6d450 20%,
+                                     #e6d450 40%,
+                                     #f28f68 40%,
+                                     #f28f68 60%,
+                                     #cf82bf 60%,
+                                     #cf82bf 80%,
+                                     #719fd1 80%,
+                                     #719fd1 100%);
+
+}
+
+.swatch__elem {
+  
+  outline: 0px solid #c00;
+  float: left;
+  width: 110px;
+  padding-left: 5px;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.used-space {
+  
+  display: block;
+  line-height: 2;
+  font-size: 85%;
+  color: #666;
+}
+
+.meter-gauge {
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    background-color: whiteSmoke;
+    box-shadow: 0 5px 5px -5px #333 inset;
+
+    width: 550px;
+    height: 25px;
+    
+    display: block;
+}
+  
+.meter-gauge > span {
+ 
+  height: inherit;  
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-color: blue;
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+
+  display: block;
+  text-indent: -9999px;
+}
+
+```
+---
+
+# nav tag
+The nav tag defines a set of navigation links.
+
+Notice that NOT all links of a document should be inside a nav element. The nav element is intended only for major blocks of navigation links.
+
+Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+
+HTML example1
+```
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+<div class="main"> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus turpis quis <span id="highlight">velit accumsan</span> faucibus. Nulla eleifend erat non sapien posuere rutrum. Sed non turpis nec nibh tristique lacinia eu at nulla. Sed lacinia sagittis nisi vitae auctor. Sed non pretium neque. </p>
+</div>
+
+
+```
+CSS example1
+```
+nav {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+
+nav a:link {
+  color: #FF0000;
+}
+
+nav a:visited {
+  color: #00FF00;
+}
+
+nav a:hover {
+  color: #FF00FF;
+}
+
+nav a:active {
+  color: #0000FF;
+}
+
+.main {
+  text-align:center;
+  background-color: #cccccc;
+}
+
+#highlight {
+  background-color: #fff000;
+}
+```
+HTML example2
+```
+<nav class="site-nav">
+ <li class="nav-icon">
+  <a>☰</a>
+ </li>
+ <div class="menu-top-menu-container">
+  <ul id="menu-top-menu" class="menu">
+
+   <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+    <a href="#">Home</a>
+   </li>
+
+   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+    <a href="www.google.com">About Us</a>
+    <ul class="sub-menu">
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Press and Media</a>
+     </li>
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Testimonials</a>
+     </li>
+     	<li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Terms &#038; Conditions</a>
+     </li>
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Contact Us</a>
+     </li>
+    </ul>
+   </li>
+
+   <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+    <a href="#">Home</a>
+   </li>
+
+   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+    <a href="#">Menu 2</a>
+    <ul class="sub-menu">
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Press and Media 2</a>
+     </li>
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Testimonials 2</a>
+     </li>
+     	<li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Terms &#038; Conditions 2</a>
+     </li>
+	     <li class="menu-item menu-item-type-post_type menu-item-object-page">
+      <a href="#">Contact Us 2</a>
+     </li>
+    </ul>
+   </li>
+ 
+  </ul>
+ </div>
+</nav>
+
+<span style="color:#ffcc00">
+<p>CSS and jQuery scripts of this pen are meant for making your WordPress navigation menus responsive and interactive for phones, tablets, and desktops.</p>
+<p>Make sure you surround your WordPress theme's menu with the nav tag and the nav-icon code in header.php.</p>
+</span>
+
+```
+CSS example2
+```
+*{margin:0;padding:0;} body{background:#111;}
+a{color:#777;text-decoration:none;}
+.site-nav, .site-nav li > ul{ background:#222; min-height:50px; }
+.site-nav a { padding:0 15px; display:block; }
+.site-nav ul{ list-style: none; }
+.site-nav ul > li { line-height: 50px; text-align: center; }
+@media screen and (min-width: 650px)
+{
+ .site-nav .nav-icon{ display:none; }
+ .menu-top-menu-container{ display:block; }
+ .site-nav li{ display: inline-block; }
+ .site-nav li ul { position: absolute; display: none; }
+ .site-nav li:hover ul, .site-nav li ul li { display: block; z-index:999; }
+}
+@media screen and ( max-width: 650px )
+{
+ .site-nav .nav-icon{ position:absolute; right:0px; list-style:none;}
+ .site-nav .nav-icon a:hover{ cursor:pointer; }
+ .site-nav .nav-icon a{ display:block; line-height:50px; color:#fc0; font-size:1.5em;}
+ .site-nav > .menu-top-menu-container{ display:none; }
+ .site-nav ul > li, .site-nav ul li ul li{ display:block; }
+ .site-nav li > ul{ display:none; width: 100%; position:relative; }
+}
+.nav-fixed {position:fixed;top:0;width:100%;}
+header{min-height:50px;}
+p{width:350px;padding:10px;margin:0 auto;}
+```
+
+# noscript tag
+The noscript tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support script.
+
+The noscript element can be used in both head and body. When used inside head, the noscript element could only contain link,style, and meta elements.
+
+example1
+```
+<body>
+	<h2>This is a demo of the tag «noscript» in HTML.</h2>
+	<p>Enable and disable Javascript in your web browser to see the hidden message. <br>You can use the inspector tools or an add-on like NoScript, and target cdpn.io domain to see the pen in action.</p>
+  
+  <noscript>
+    <section class="unsupported">
+      <div class="unsupported-wrapper">
+				
+        <h1 class="unsupported-title">
+          Please enable<br>
+          Javascript.
+        </h1>
+
+         <p class="unsupported-paragraph">
+            This website requires Javascript in order<br>
+            to work properly.
+         </p>
+				
+      </div>
+    </section>
+  </noscript>
+	
+</body>
+
+```
+example2
+```
+<script>
+document.write("Merhaba Dünya!")
+</script>
+<noscript>Tarayıcınız javascript desteklemiyor!</noscript>
+
+```
+---
+# object tag
+The object tag defines a container for an external resource.
+
+The external resource can be a web page, a picture, a media player, or a plug-in application.
+
+example
+```
+<html>
+<body>
+
+<h1>The object element</h1>
+
+<object data="snippet.html" width="500" height="200">
+</object>
+ 
+</body>
+</html>
+
+```
+---
+# ol tag
+The ol tag defines an ordered list. An ordered list can be numerical or alphabetical.
+
+The li tag is used to define each list item.
+
+example1
+```
+<html>
+<body>
+
+<h1>Specify list type with CSS</h1>
+
+<ol style="list-style-type:upper-roman">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol style="list-style-type:lower-alpha">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<head>
+<style>
+ol.a {list-style-type: armenian;}
+ol.b {list-style-type: cjk-ideographic;}
+ol.c {list-style-type: decimal;}
+ol.d {list-style-type: decimal-leading-zero;}
+ol.e {list-style-type: georgian;}
+ol.f {list-style-type: hebrew;}
+ol.g {list-style-type: hiragana;}
+ol.h {list-style-type: hiragana-iroha;}
+ol.i {list-style-type: katakana;}
+ol.j {list-style-type: katakana-iroha;}
+ol.k {list-style-type: lower-alpha;}
+ol.l {list-style-type: lower-greek;}
+ol.m {list-style-type: lower-latin;}
+ol.n {list-style-type: lower-roman;}
+ol.o {list-style-type: upper-alpha;}
+ol.p {list-style-type: upper-latin;}
+ol.q {list-style-type: upper-roman;}
+ol.r {list-style-type: none;}
+ol.s {list-style-type: inherit;}
+</style>
+</head>
+<body>
+
+<h1>All the different list types for ol with CSS</h1>
+
+<ol class="a">
+  <li>Armenian type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="b">
+  <li>Cjk-ideographic type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="c">
+  <li>Decimal type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Decimal-leading-zero type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="e">
+  <li>Georgian type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="f">
+  <li>Hebrew type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="g">
+  <li>Hiragana type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="h">
+  <li>Hiragana-iroha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="i">
+  <li>Katakana type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="j">
+  <li>Katakana-iroha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="k">
+  <li>Lower-alpha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="l">
+  <li>Lower-greek type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="m">
+  <li>Lower-latin type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="n">
+  <li>Lower-roman type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="o">
+  <li>Upper-alpha type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="p">
+  <li>Upper-latin type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="q">
+  <li>Upper-roman type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="r">
+  <li>None type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="s">
+  <li>inherit type</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+</body>
+</html>
+
+```
+---
+
+# optgrouop tag
+the optgroup tag is used to group related options in a select element (drop-down list).
+
+If you have a long list of options, groups of related options are easier to handle for a user.
+
+example1
+
+```
+<html>
+<body>
+
+<h1>The optgroup element</h1>
+
+<p>The optgroup tag is used to group related options in a drop-down list:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+ 
+</body>
+</html>
+
+```
+example2
+```
+<p>Select your game:
+	<select name="games">
+		<optgroup label="PS4">
+			<option>PS4 Game 1</option>
+			<option>PS4 Game 2</option>
+			<option>PS4 Game 3</option>
+		</optgroup>
+		<optgroup label="PS3">
+			<option>PS3 Game 1</option>
+			<option>PS3 Game 2</option>
+			<option>PS3 Game 3</option>
+		</optgroup>
+		<optgroup label="XBOX 360">
+			<option>XBOX 360 Game 1</option>
+			<option>XBOX 360 Game 2</option>
+		</optgroup>
+		<optgroup label="XBOX ONE">
+			<option>XBOX ONE Game 1</option>
+			<option>XBOX ONE Game 2</option>
+			<option>XBOX ONE Game 3</option>
+			<option>XBOX ONE Game 4</option>
+			<option>XBOX ONE Game 5</option>
+		</optgroup>
+	</select>
+</p>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+---
+
+
+
+
+
+
+
+
+
+
 
 
 
