@@ -5826,6 +5826,7 @@ example2
 
 ```
 CSS example2
+
 ```
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
@@ -6504,22 +6505,3094 @@ example2
 
 ```
 ---
+# option tag
+The option tag defines an option in a select list.
+
+option elements go inside a select, optgroup, or datalist element.
+
+HTML example1
+```
+<h1>Search in select "option" tag</h1>
+<select multiple name="selectMenu" id="selectMenu" style="width:100px" size=10>
+<option value ="item 1">item 1</option>
+<option value ="item 2">item 2</option>
+<option value ="thing 3">thing 3</option>
+<option value ="item 4">item 4</option>
+<option value ="stuff 5">stuff 5</option>
+<option value ="stuff 6">stuff 6</option>
+<option value ="stuff 7">stuff 7</option>
+<option value ="item 8">item 8</option>
+</select>
+
+<p>Search within this list</p>
+<input type=text name="search" id="search" onkeypress="searchItems();">
+<br>
+<input type=button value="Search" onclick="searchItems();">
+<input type=button value="Reset List" onclick="resetList();">
+  
+  <div class="Ref">
+    check out our website
+    <a href="http://aliensolutions.net/">Alien solutions</a> | <a href="http://aliensolutions.net/themes/?theme=Flat-UI">Download Flat UI framework here</a>
+  </div>
+
+```
+CSS example1
+```
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300);
+h1{
+  with:100%;
+  background:#34495E;
+  color:#fff;
+  padding:10px 20px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight:300;
+}
+.Ref{
+  border-top:3px solid #2980B9;
+  margin:10px 0px 50px 0px;
+  font-family: 'Oxygen', sans-serif;
+  
+}
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The option element</h1>
+
+<label for="cars">Choose a car:</label>
+
+<select id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+  
+</body>
+</html>
+
+```
+---
+# output tag
+The output tag is used to represent the result of a calculation (like one performed by a script).
+
+example
+
+
+```
+<html>
+<body>
+
+<h1>The output element</h1>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50">
++<input type="number" id="b" value="25">
+=<output name="x" for="a b"></output>
+</form>
+
+<p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p>
+
+</body>
+</html>
+
+```
+---
+# paragraph tag
+The p tag defines a paragraph.
+
+Browsers automatically add a single blank line before and after each <p> element.
+
+example
+```
+<html>
+<head>
+<style>
+p {
+  color: navy;
+  text-indent: 30px;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<h1>Style paragraphs with CSS</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>
+
+```
+---
+# param tag
+
+The param tag is used to define parameters for an object element.
+
+example
+```
+<p><b>Not:</b> internet explorer 8 ve önceki sürümlerinde .waw uzantısını desteklemez.</p>
+
+<object data="http://w3tr.com/file/flut1.mp3">
+<param name="oynat" value="true">
+</object>
+```
+---
+# picture tag
+The picture tag gives web developers more flexibility in specifying image resources.
+
+The most common use of the picture element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+
+The picture element contains two tags: one or more source tags and one img tag.
+
+The browser will look for the first source element where the media query matches the current viewport width, and then it will display the proper image (specified in the srcset attribute). The img element is required as the last child of the picture element, as a fallback option if none of the source tags matches.
+
+example1
+
+```
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>The picture element</h1>
+
+<p>Resize the browser window to load different images.</p>
+
+<picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+</body>
+</html>
+
+```
+---
+# pre tag
+
+the pre tag defines preformatted text.
+
+Text in a pre element is displayed in a fixed-width font, and the text preserves both spaces and line breaks. The text will be displayed exactly as written in the HTML source code.
+
+example
+
+```
+<html>
+<body>
+
+<h1>The pre element</h1>
+
+<pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre>
+
+</body>
+</html>
+
+```
+---
+# progress tag 
+The progress tag represents the completion progress of a task.
+
+Tip: Always add the label tag for best accessibility practices!
+
+example1 html 
+```
+<ul>
+	<li>
+		<h2>Frontend</h2>
+		
+		<!-- HTML5 -->
+    <p style="width:80%" data-value="80">HTML5</p>
+		<progress max="100" value="80" class="html5">
+			
+			<div class="progress-bar">
+				<span style="width: 80%">80%</span>
+			</div>
+		</progress>
+		
+		<!-- CSS3 -->
+    <p style="width:60%" data-value="60">CSS3</p>
+		<progress max="100" value="60" class="css3">
+			
+			<div class="progress-bar">
+				<span style="width: 60%">60%</span>
+			</div>
+		</progress>
+		
+		<!-- jQuery -->
+    <p style="width:50%" data-value="50">jQuery</p>
+		<progress max="100" value="50" class="jquery">
+			
+			<div class="progress-bar">
+				<span style="width: 50%">50%</span>
+			</div>
+		</progress>
+		
+	</li>
+	<li>
+		<h2>Backend</h2>
+		
+    <!-- Python -->
+    <p style="width:75%" data-value="75">Python</p>
+		<progress max="100" value="75" class="python">
+			
+			<div class="progress-bar">
+				<span style="width: 75%">75%</span>
+			</div>
+		</progress>
+		
+		<!-- PHP -->
+    <p style="width:65%" data-value="65">PHP</p>
+		<progress max="100" value="65" class="php">
+			
+			<div class="progress-bar">
+				<span style="width: 65%">65%</span>
+			</div>
+		</progress>
+		
+		<!-- Node.js -->
+    <p style="width:35%" data-value="35">Node.js</p>
+    <progress max="100" value="35" class="node-js">
+			
+			<div class="progress-bar">
+				<span style="width: 35%">35%</span>
+			</div>
+		</progress>		
+		
+	</li>
+</ul>
+
+<p>Article - <a href="https://css-tricks.com/html5-progress-element/">https://css-tricks.com/html5-progress-element/</a></p>
+
+```
+CSS example1
+```
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+
+
+
+* { 
+	margin:0; padding:0; 
+	box-sizing: border-box;
+}
+
+body {
+margin: 50px auto 0;
+max-width: 800px;
+
+font-family: "Expletus Sans", sans-serif;
+}
+
+li {
+  width: 50%;
+	float: left;
+	list-style-type: none;
+	
+	padding-right: 5.3333333%;
+}
+
+li:nth-child(even) { margin-bottom: 5em;}
+
+h2 {
+	margin: 0 0 1.5em;
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 .25em;
+}
+progress:not(value) {
+
+}
+progress[value] {
+	
+	appearance: none;
+	
+	border: none;
+	
+	
+	width: 100%; height: 20px;
+	  background-color: whiteSmoke;
+	  border-radius: 3px;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	
+	color: royalblue;
+	position: relative;
+	margin: 0 0 1.5em; 
+}
+
+
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+	position: relative;
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+
+progress[value]::-webkit-progress-value:after {
+
+	content: '';
+	position: absolute;
+	
+	width:5px; height:5px;
+	top:7px; right:7px;
+	
+	background-color: white;
+	border-radius: 100%;
+}
+
+
+progress[value]::-moz-progress-bar {
+	
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+/* Fallback technique styles */
+.progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+	
+	width: 100%; height:20px;
+}
+
+.progress-bar span {
+	background-color: royalblue;
+	border-radius: 3px;
+	
+	display: block;
+	text-indent: -9999px;
+}
+
+p[data-value] { 
+  
+  position: relative; 
+}
+
+
+
+p[data-value]:after {
+	content: attr(data-value) '%';
+	position: absolute; right:0;
+}
 
 
 
 
 
+.html5::-webkit-progress-value,
+.python::-webkit-progress-value  {
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #f44);
+}
+
+.css3::-webkit-progress-value,
+.php::-webkit-progress-value 
+{
+	
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-webkit-progress-value,
+.node-js::-webkit-progress-value 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #690);
+}
 
 
 
+.html5::-moz-progress-bar,
+.php::-moz-progress-bar {
+	
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+}
+
+.css3::-moz-progress-bar,
+.php::-moz-progress-bar {
+{
+	
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #690);
+}
 
 
+  
+
+```
+---
+example2 HTML
+```
+<div class="playground">
+  <div class="bar-container">
+    <h2>HTML</h2>
+    <ul>
+      <li>
+       <span class="css-progressbar bar"/>
+      </li>
+    </ul>
+  </div>
+  <div class="bar-container">
+    <h2>HTML5</h2>
+    <progress class="progressTag" value="0" max="100"/>
+  </div>
+  <div class="bar-container">
+    <h2>SVG</h2>
+    <svg class="progressSvg" height="150" width="150">
+      <g class="progress-container">
+        <line 
+            x1="0"
+            y1="50%"
+            x2="100%"
+            y2="50%"
+            stroke-width="20" />
+      </g>
+      <g class="progress-content">
+        <line
+            x1="0"
+            y1="50%"
+            x2="100%"
+            y2="50%"
+            fill="transparent"
+            stroke-width="20" />
+      </g>
+    </svg>
+  </div>
+  
+</div>
+
+```
+
+CSS example2
+```
+body {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #41b882;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .playground {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12), 0 2px 1px 0 rgba(0,0,0,.12);
+    width: 600px;
+    height: 200px;
+    display: flex;
+    padding: 1rem;
+    .bar-container {
+      h2 {
+        position: absolute;
+        text-align: center;
+        top: 10px;
+        width: 100%;
+      }
+      position: relative;
+      height: 100%;
+      flex: 0 0 30%;
+      margin: 0 auto;
+      background-color: #41b882;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // **** CSS progress bar ****
+      ul {
+        position: relative;
+        padding: 0;
+        list-style: none;
+        width: 150px;
+        li {
+          background-color: #fff;
+          height:20px; 
+          border-radius:10px;
+          .bar {
+            position: absolute;
+            border-radius: 10px; 
+            background-color: #35495e;
+            height: 20px;
+            &:after  {
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              content: "";
+              width: 27px;
+              height: 27px;
+              position: absolute;
+              top: -3px;
+              right: 0;
+              border-radius: 50%;
+              background-color: #607d8b;
+            }
+          }
+          .css-progressbar {
+            width: 80%; 
+            -moz-animation: css-progressbar 2s ease-out;
+            -webkit-animation: css-progressbar 2s ease-out;
+          }
+        }
+      }
+      // **** HTML TAG progress bar ****
+      .progressTag {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: block;
+        width: 150px;
+        height: 20px;
+        border-radius: 7px;
+        color: #35495e;
+      }
+      progress::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 8px;
+      }
+      progress::-webkit-progress-value {
+        background-color: #35495e;
+        border-radius: 8px;
+      }
+      progress::-moz-progress-bar {
+        background-color: #eee;
+        border-radius: 8px;
+      }
+      // **** SVG progress bar ****
+      .progressSvg {
+        border-radius: 7px;
+        color: #35495e;
+        .progress-container {
+          stroke: #eee;
+        }
+        .progress-content {
+          stroke: #35495e;
+        }
+        
+        .progress-content > line {
+          stroke-dasharray: 100%;
+          stroke-dashoffset: 20%;
+          -moz-animation: svg-progress 2s ease-out;
+          -webkit-animation: svg-progress 2s ease-out;
+        }
+      }
+    }
+  }
+}
+
+ @-webkit-keyframes svg-progress {
+   0% {
+     stroke-dashoffset: 100%;
+   }
+   100% {
+     stroke-dashoffset: 20%;
+   }
+}
+
+@-moz-keyframes svg-progress {
+   0% {
+     stroke-dashoffset: 100%;
+   }
+   100% {
+     stroke-dashoffset: 20%;
+   }
+}
+
+@-webkit-keyframes css-progressbar { 
+  0%  { 
+    width: 0px;
+  } 
+  100% { 
+    width: 80%;
+  }  
+}
+
+@-moz-keyframes css-progressbar {
+  0% { 
+    width: 0px;
+  } 
+  100% { 
+    width: 80%;
+  }  
+}
+
+```
+---
+
+# q tag
+The q tag defines a short quotation.
+
+Browsers normally insert quotation marks around the quotation.
+
+example
+```
+<html>
+<body>
+
+<h1>The q element</h1>
+
+<p>WWF's goal is to: 
+<q>Build a future where people live in harmony with nature.</q>
+We hope they succeed.</p>
+
+</body>
+</html>
+
+```
+---
+# parentheses tag
+The rp tag can be used to provide parentheses around a ruby text, to be shown by browsers that do not support ruby annotations.
+
+Use rp together with ruby and rt: The ruby element consists of one or more characters that needs an explanation/pronunciation, and an rt element that gives that information, and an optional rp element that defines what to show for browsers that not support ruby annotations.
+
+example1
+```
+<h3>Example in English text to demonstrate
+how ruby annotations are displayed by the browser.</h3>
+	<p>
+	From oranges we can create
+	<ruby> OJ <rp>(</rp><rt>Orange Juice</rt><rp>)</rp></ruby>
+	</p>
+	
+	<h3>Example in logographic language.</h3>
+	<ruby>
+	東京
+		<rp> (</rp>
+		<rt>Tō kyō</rt>
+		<rp>)</rp>
+	</ruby>
+<br>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The rp element</h1>
+
+<ruby>
+漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp>
+</ruby>
+
+</body>
+</html>
+
+```
+---
+
+# rt tag
+
+The rt tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation.
+
+Use rt together with ruby and rp: The ruby element consists of one or more characters that needs an explanation/pronunciation, and an rt element that gives that information, and an optional rp element that defines what to show for browsers that not support ruby annotations.
+
+example
+```
+<ruby>
+漢 <rt> ㄏㄢˋ </rt>
+</ruby>
+
+```
+# ruby tag
+
+he ruby tag specifies a ruby annotation.
+
+A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters. This kind of annotation is often used in Japanese publications.
+
+Use ruby together with rt and rp: The ruby element consists of one or more characters that needs an explanation/pronunciation, and an rt element that gives that information, and an optional rp element that defines what to show for browsers that do not support ruby annotations.
+
+example
+```
+<html>
+<body>
+
+<h1>The ruby and rt elements</h1>
+
+<ruby>
+ 漢 <rt> ㄏㄢˋ </rt>
+</ruby>
+
+</body>
+</html>
+
+```
+---
+# s tag
+The s tag specifies text that is no longer correct, accurate or relevant. The text will be displayed with a line through it.
+
+The s tag should not be used to define deleted text in a document, use the del tag for that.
+
+example1
+
+html
+```
+<article class="news-item">
+    <h1>WordPress 4.4 Updates</h1>
+    <section class="summary" aria-label="Summary">
+    WordPress 4.4 (code-named <s cite="https://codex.wordpress.org/Version_4.4">Bobby Brown</s> Clifford Brown) was released to the public on the 8th of December 2015.
+    </section>
+    <section class="main-content" aria-label="Main Content">
+    <p>There were several changes in V4.4 including the following</p>
+    <ul>
+        <li>New default theme - <s>Twenty Fifteen</s> Twenty Sixteen</li>
+        <li>Responsive image support (image elements in the content now support display based rendering)
+        <li>Additional embed object support such as Cloudup, Reddit Comments etc</li>
+    <ul>
+    </section>
+</article>
+
+```
+CSS 
+
+example1
+```
+body {
+  color: #333;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+h1 {
+  color: #1C94C6;
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+```
+# samp tag
+The samp tag is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font.
+
+example
+
+```
+<html>
+<body>
+
+<h1>The samp element</h1>
+
+<p>Message from my computer:</p>
+
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+</body>
+</html>
+
+```
+---
+# script tag
+The script tag is used to embed a client-side script (JavaScript).
+
+The script element either contains scripting statements, or it points to an external script file through the src attribute.
+
+Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+
+example1
+```
+<html>
+<body>
+
+<h1>The script element</h1>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
+
+</body>
+</html>
+
+```
+---
+# section tag
+
+The section tag defines a section in a document.
+
+example1 html
+```
+<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<body>
+<section class="canvas">
+<h1 >My Summer Vacation</h1>
+  
+<p class="content-style ">This summer I went to Camp Smurfabunch. I was there for 2 weeks and had mega fun times. I was the fastest kayaker in the whole camp and won a first place ribbon. I learned to tie knots, dive off a pier, and lick toads.</p>
+  
+<p class="content-style ">I met new friends Ketchel, Caleb, and Sarah. I hope they come visit me later this summer but even if they can't &mdash; I'll see them next summer.</p>
+
+<hr>
+
+<p class="content-style ">Later that summer I got to go to Wisconsin Dells with my family. We stayed at The Wilderness which has both inside and outside water parks. My mom was scared to go down the four-person funnel ride, but she did anyway and ended up liking it.</p>
+
+<p class="content-style ">We went go karting at Mt. Zues (or something, I can't remember the name but there was an old god dude holding a lightning bolt as the logo). I beat my brother and dad on the first 2 laps but dad pulled ahead and beat me on the last lap.</p>
+
+<hr>
+
+<p class="content-style ">The last thing I did this summer was go shopping for school clothes and supplies. I got a Trapper Keeper with KISS on it. And like fifty erasers because I make mistakes a lot lololol.</p>
+
+<p class="content-style ">I don't want to go back to school but I know once I get used to it, it will be fine again. I'd rather just go down waterslides all day.</p>
+</section>
+
+```
+example2 html
+```
+<h1>Accessible CSS Accordion Menus <sup><a href="#notes">#notes</a></sup></h1>
+  
+  <h2>Radio based accordion</h2>
+  <big><em>Only one collapsible section can be open at any given time. Use the <pre>TAB</pre> key to focus on the group and then navigate through it with the <pre>UP</pre> and <pre>DOWN</pre> keys.</em></big>
+
+  <section class="faq-container">
+
+    <input id="faq1a" name="faq1" type="radio" checked="checked">
+    <label for="faq1a">A surprise party?</label>
+    <article>
+      <p>Mr. Worf, I hate surprise parties.</p>
+    </article>
+
+    <input id="faq1b" name="faq1" type="radio">
+    <label for="faq1b">I've had twelve years to think about it.</label>
+    <article>
+      <p>And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them.</p>
+    </article>
+
+    <input id="faq1c" name="faq1" type="radio">
+    <label for="faq1c">I would *never* do that to you.</label>
+    <article>
+      <p>I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet.</p>
+    </article>
+
+    <input id="faq1d" name="faq1" type="radio">
+    <label for="faq1d">Could someone survive inside a transporter buffer for 75 years?</label>
+    <article>
+      <p>I suggest you drop it, Mr. Data. This is not about revenge.</p>
+    </article>
+
+  </section>
+  
+  <h2>Checkbox based accordion</h2>
+  <big><em>Multiple collapsible sections can be open at any given time. Use the <pre>TAB</pre> key to focus on the group and navigate through the section labels, <pre>SHIFT+TAB</pre> can be used to navigate backwards. Pressing <pre>SPACE</pre> on an active section will toggle the article visibility.</em></big>
+
+  <section class="faq-container">
+
+    <input id="faq2a" name="faq2" type="checkbox" checked="checked">
+    <label for="faq2a">What's a knock-out like you doing in a computer-generated gin joint like this?</label>
+    <article>
+      <ul>
+        <li>Congratulations - you just destroyed the Enterprise.</li>
+        <li>Worf, It's better than music. It's jazz.</li>
+        <li>Wait a minute - you've been declared dead.</li>
+        <li>A lot of things can change in twelve years, Admiral.</li>
+      </ul>
+    </article>
+
+    <input id="faq2b" name="faq2" type="checkbox">
+    <label for="faq2b">Mr. Worf, you do remember how to fire phasers?</label>
+    <article>
+      <ul>
+        <li>Some days you get the bear, and some days the bear gets you.</li>
+        <li>Your only concern is with how you obey my orders.</li>
+        <li>Fear is the true enemy, the only enemy.</li>
+        <li>For an android with no feelings, he sure managed to evoke them in others.</li>
+      </ul>
+    </article>
+
+    <input id="faq2c" name="faq2" type="checkbox">
+    <label for="faq2c">Yesterday I did not know how to eat gagh.</label>
+    <article>
+      <p>Now we know what they mean by 'advanced' tactical training.</p>
+    </article>
+
+    <input id="faq2d" name="faq2" type="checkbox">
+    <label for="faq2d">Are you up for promotion?</label>
+    <article>
+      <p>Why don't we just give everybody a promotion and call it a night - 'Commander'?</p>
+    </article>
+
+  </section>
+  
+  <h2 id="notes">Notes</h2>
+  <h3><em>This is my initial stab at a pure CSS accordion solution that is accessible. With inspiration from the following pens: <a href="https://codepen.io/simtoalev/pen/jAJzjg">Pure CSS Accordion Content With Animation</a>, and <a href="https://codepen.io/anzjoy/pen/bahAv">Pure Css Accordion Menu</a>. However, it's still far from perfect. So feel free to fork this and improve on it. Issues I've considered include:</em></h3>
+  <ul>
+    <li>Is it semantically correct?  Would swapping the SECTION tag for a definition list (DL) and wrapping the input and label elements in a DT tag and the answer in a DD tag be better?</li>
+    <li>The Font Awesome icons are injected via CSS. Do screen readers see these? Must test.</li>
+    <li>The question mark to the left would probably become repetative if it is seen screen reader.  What would it read out, F29C is a private use code point?</li>
+    <li>The chevron to the right wraps awkwardly on narrow viewports.  It also has the same accessibility issues as the question mark, with the added issue that it is used to indicate state.</li>
+    <li>My transitions on the ARTICLE tag aren't firing, haven't investigated yet.</li>
+    <li>No, the colours aren't accessible. <i class="fa fa-frown-o"></i></li>
+  </ul>
+  <h3><em>Changes</em></h3>
+  <ul>
+    <li>I removed the <strong>aria-hidden</strong> attribute from the <strong>input</strong> tags as this was causing the screen reader (ChromeVox) to ignore the associated label text.</li>
+  </ul>
+
+```
+example2 CSS
+```
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700';
+
+body {
+  background: #FFF;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+}
+
+h1 {
+  color: #333;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+h1 sup a { color: #999; font-size: 14px; text-decoration: none; }
+h1 sup a:hover { color: #666; text-decoration: none; }
+h1 sup a:focus,
+h1 sup a:active { color: #666; text-decoration: underline; }
+
+h2 {
+  color: #333;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: left;
+}
+
+big {
+  color: #333;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+big pre {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  text-align: left;
+  margin: 10px auto 30px auto;
+  position: relative;
+}
+.faq-container article p { margin: 10px 15px 15px 15px; }
+.faq-container input[type=checkbox],
+.faq-container input[type=radio] {
+  background-color: transparent;
+  border: 1px solid transparent;
+  height: 1px;
+  position: absolute;
+  width: 1px;
+  margin: 4px 0 0 0;
+  outline: none;
+}
+.faq-container input[type=checkbox] + label,
+.faq-container input[type=radio] + label {
+  background: #EEEEEE;
+  border-bottom: 1px solid #fff;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 20;
+}
+.faq-container input[type=checkbox] + label:before,
+.faq-container input[type=radio] + label:before,
+.faq-container input[type=checkbox] + label:after,
+.faq-container input[type=radio] + label:after {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+.faq-container input[type=checkbox] + label:before,
+.faq-container input[type=radio] + label:before {
+  content: "\f29c";
+  padding-right: 10px;
+}
+.faq-container input[type=checkbox] + label:after,
+.faq-container input[type=radio] + label:after {
+  content: "\f054";
+  float: right;
+  padding-left: 10px;
+}
+.faq-container input[type=checkbox] + label:hover,
+.faq-container input[type=radio] + label:hover { background: #D6D6D6; }
+.faq-container input[type=checkbox]:checked + label,
+.faq-container input[type=radio]:checked + label { background: #EEEEEE; }
+.faq-container input[type=checkbox]:focus + label,
+.faq-container input[type=radio]:focus + label { background: #BEBEBE; }
+.faq-container input[type=checkbox]:checked + label:hover,
+.faq-container input[type=radio]:checked + label:hover { background: #D6D6D6; }
+.faq-container input[type=checkbox]:checked + label:after,
+.faq-container input[type=radio]:checked + label:after {
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+.faq-container input[type=checkbox] + label + article,
+.faq-container input[type=radio] + label + article {
+  display: none;
+  /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+.faq-container input[type=checkbox]:checked + label + article,
+.faq-container input[type=radio]:checked + label + article {
+  display: block;
+  height: auto;
+  max-height: 2000px;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+```
+---
+# select tag
+The select element is used to create a drop-down list.
+
+The select element is most often used in a form, to collect user input.
+
+The name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the drop-down list will be submitted).
+
+The id attribute is needed to associate the drop-down list with a label.
+
+The option tags inside the select element define the available options in the drop-down list.
+
+Example1 
+
+HTML
+```
+<div class="container">
+
+		<div class="selected-item">
+			<p>You Selected Country : <span>Select</span></p>
+		</div>
+
+		<select name="" id="cusSelectbox">
+			<option value="Select">Select</option>
+			<option value="India">India</option>
+			<option value="Nepal">Nepal</option>
+			<option value="Bangladesh">Bangladesh</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+		</select>
+	
+		<div class="feaBlock">
+			<ol>
+				<li>Up & Down key works on list items.</li>
+				<li>Key enter works on list items.</li>
+				<li>Scrollbar hide, but you can scroll the list items.</li>
+			</ol>
+		</div>
+
+	</div>
+
+```
+example1 CSS 
+```
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/* variables */
+/* default style */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 16px;
+}
+/* common style */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+* {
+  outline: none;
+}
+::-webkit-scrollbar { 
+  display: none; 
+}
+/* */
+.container {
+	margin: 0 auto;
+	max-width: 400px;
+  text-align: center;
+}
+.selected-item {
+  margin: 20px 0;
+}
+/* custom select style */
+.cusSelBlock {
+  height: 50px;
+  min-width: 250px;
+}
+#cusSelectbox {
+  height: 100%;
+  width: 100%;
+}
+.s-hidden {
+  visibility: hidden;
+}
+.cusSelBlock {
+  display: inline-block;
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+.selectLabel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+
+  background-color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  display: block;
+
+  height: 100%;
+  width: 100%;
+
+  letter-spacing: 2px;
+  line-height: 50px;
+  padding: 0 50px 0 20px;
+  text-align: left;
+
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  &:after {
+    content: '\25BC';
+    border-left: 1px solid #333;
+    color: #333;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 10px;
+    text-align: center;
+
+    position: absolute;
+    right: 0px;
+    top: 15%;
+
+    height: 70%;
+    width: 50px;
+  }
+  &:active {
+    -webkit-transform: rotateX(30deg);
+            transform: rotateX(30deg);
+    &:after {
+      content: '\25B2';
+    }
+  }
+  &.active {
+    &:after {
+      content: '\25B2';
+    }
+    &+.options {
+      //height: 200px;
+      //overflow-y: scroll;
+    }
+  }
+}
+::-webkit-scrollbar { 
+  display: none; 
+}
+.options {
+  position: absolute;
+  top: 50px;
+
+  height: 1px;
+  width: 100%;
+  li {
+    background-color: rgb(255,255,255);
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    display: block;
+    line-height: 50px;
+    list-style: none;
+    opacity: 1;
+    padding: 0 50px 0 20px;
+    text-align: left;
+
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 0;
+
+    height: 50px;
+    width: 100%;
+    &:hover, &.active {
+      background-color: #333;
+      color: #fff;
+    }
+    &:nth-child(1) {
+      -webkit-transform: translateY(2px);
+      transform: translateY(2px);
+      z-index: 6;
+    }
+    &:nth-child(2) {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+      z-index: 5;
+    }
+    &:nth-child(3) {
+      z-index: 4;
+    }
+    &:nth-child(4) {
+      z-index: 3;
+    }
+    &:nth-child(5) {
+      z-index: 2;
+    }
+    &:nth-child(6) {
+      z-index: 1;
+    }
+  }
+}
+
+/**/
+.feaBlock {
+	margin: 20px 0;
+	text-align: left;
+}
+
+```
+example2
+```
+<html>
+ <form>
+<fieldset>
+   <label for="state">State</label>
+			<select id="state" name="state"><option value="---">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
+   </fieldset>
+</form>
+</html>
+
+```
+---
+# small tag
+The small tag defines smaller text (like copyright and other side-comments).
+
+example
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The small element</h1>
+
+<p>This is some normal text.</p>
+<p><small>This is some smaller text.</small></p>
+
+</body>
+</html>
+
+```
+---
+
+# source tag
+The source tag is used to specify multiple media resources for media elements, such as video, audio, and picture.
+
+The source tag allows you to specify alternative video/audio/image files which the browser may choose from, based on browser support or viewport width. The browser will choose the first source it supports.
 
 
+example1
+```
+<audio controls>
+  <source src="http://w3tr.com/file/flut1.mp3" type="audio/mpeg">
+   Tarayıcınız audio elementini desteklemiyor.
+</audio>
+
+```
+example2
+```
+ <main class="container">
+    <article class="jumbotron row">
+      <div class="page-header">
+        <h2>Video player</h2>
+      </div>
+    </article>
+    <article class="well row">
+      <div class="video-container col-lg-8">
+        <video id='video'
+               width="723px"
+               height="361px"
+               preload='none'
+               mediagroup='myVideoGroup'
+               poster="https://img00.deviantart.net/176d/i/2008/306/a/1/big_buccaneer_by_ratow.jpg">
+          <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/7/79/Big_Buck_Bunny_small.ogv/Big_Buck_Bunny_small.ogv.120p.vp9.webm" type='video/webm'>
+         
+        </video>
+        <div>
+          <button id="controlsPlayPause" class="btn btn-primary" title="Play/Pause">&#9654;/&#8214;</button>
+          <button id="controlsStop" class="btn btn-primary">&#9632;</button>
+          <button id="controlsDecreaseVolume" class="btn btn-primary" title="Decrease volume">-</button>
+          <button id="controlsMute" class="btn btn-primary" title="Mute / Unmute">&#128266;</button>
+          <button id="controlsIncreaseVolume" class="btn btn-primary" title="Increase volume">+</button>
+          <button id="controlsDecreaseSpeed" class="btn btn-primary" title="Decrease speed">&#9664;&#9664;</button>
+          <button id="controlsIncreaseSpeed" class="btn btn-primary" title="Increase speed">&#9654;&#9654;</button>
+          <button id="controlsLoop" class="btn btn-info" title="Loop">&#10561;</button>
+          <button id="controlsReload" class="btn btn-success" title="Load Audio">&#8645;</button>
+          <button id="controlsStepBack" class="btn btn-warning" title="Step back">&#8630;</button>
+          <button id="controlsStepForward" class="btn btn-danger" title="Step forward">&#8631;</button>
+        </div>
+      </div>
+      <div id="videoPlaylist" class="video-playlist col-lg-4"></div>
+      <br/><br/>
+      <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+    </article>
+    <article class="tabs-container well row video-tabs-container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Media Events</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Media Properties</a></li>
+      </ul>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <table class="table table-striped">
+            <caption>Media Events</caption>
+            <tbody id='eventsTableID'>
+            </tbody>
+          </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          <table class="table table-striped">
+            <caption>Media Properties</caption>
+            <tbody id='propertiesTableID'>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <p class="copyright text-center">2017 &copy; <a href="http://www.astulov.ru" target="_blank">ASTULOV.RU</a></p>
+  </footer>
+```
+example2 CSS
+```
+.video-playlist {
+    height: 406px;
+    overflow-y: scroll;
+}
+.video-playlist .mt-0{
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+.video-playlist .media-object {
+    width: 150px;
+    height: 100px;
+}
+.video-tabs-container {
+    height: 450px;
+}
+
+```
+---
+# span tag
+The span tag is an inline container used to mark up a part of a text, or a part of a document.
+
+The span tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+
+The span tag is much like the div element, but div is a block-level element and span is an inline element.
+
+example1 html
+```
+<ul class="colors">
+  <span style="font-family: sans-serif; color:#777">Tag Color:</span>
+  <li style="background: #F95;"></li>  
+  <li style="background: #6AD;"></li>
+  <li style="background: #E77;"></li>
+  <li style="background: #6C7;"></li>
+  <li style="background: #AAA;"></li>
+  
+</ul>
 
 
+<h1 id="title">tags<span>.css</span></h1>
+<label for="tag-typer">
+<div id="tags">
+  <span class="tag"><span class="close">&times;</span>such tage</span>
+  <span class="tag"><span class="close">&times;</span>so color</span>
+  <span class="tag"><span class="close">&times;</span>many type</span>
+  <span class="tag"><span class="close">&times;</span>wow</span>
+  <input id="tag-typer" type="text" placeholder="Add tag..."/>
+  
+</div>
+</label>
+
+```
+example1 CSS 
+```
+#title{
+  font:bold 48pt "Trebuchet MS";
+  text-align: center;
+  color: #F95;
+  letter-spacing: -2px;
+}
+#title span{
+  font-weight: normal;
+  color: #BBB;
+}
+
+#tags{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #CCC inset;
+  padding: 10px;
+  width: 50%;
+  background: #fafafa;
+  margin: auto;
+}
+
+#tag-typer{
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin: 3px;
+  margin-right: -25px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.tag{
+  display: inline-block;
+  background: #F95;
+  color: #FFF;
+  padding: 5px 10px;
+  margin:2px 2px 2px 20px;
+  font: normal 16px sans-serif;
+  position: relative;
+  cursor: default;
+  box-shadow:1px 1px 0 rgba(0,0,0,.2);
+  -webkit-transform-origin:0% 50%;
+  -webkit-animation: swing 1s;
+  -o-animation: swing 1s;
+  animation: swing 1s ;
+}
+
+.tag:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 10px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius:10px 0 0 10px;
+  border-radius:10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+
+.tag:after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFF;
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  box-shadow:inset 1px 1px 0 #CCC;
+}
+
+.tag .close{
+  position: absolute;
+  background: inherit;
+  left: -4px;
+  z-index: 3;
+  visibility: hidden;
+}
+
+.tag:hover .close{
+  visibility: visible;
+  
+}
+
+.close:hover {
+  color: rgba(0,0,0,.5);
+}
 
 
+.colors {
+  list-style:none;
+}
+.colors li{
+  display: inline-block;
+  width:15px;
+  height: 15px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing
+{
+  0%   {-webkit-transform: rotate(100deg)}
+  25%  {-webkit-transform: rotate(-25deg)}
+  50%  {-webkit-transform: rotate(15deg)}
+  100% {-webkit-transform: rotate(0deg)}
+}
+
+
+@keyframes swing
+{
+  0%   {-webkit-transform: rotate(-200)}
+  25%  {-webkit-transform: rotate(-70)}
+  50%  {-webkit-transform: rotate(-185)}
+  100% {-webkit-transform: rotate(-180)}
+}
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The span element</h1>
+
+<p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+</body>
+</html>
+
+```
+---
+# strong tag
+
+The strong tag is used to define text with strong importance. The content inside is typically displayed in bold.
+
+example
+```
+<html>
+<body>
+
+<h1>The strong element</h1>
+
+<p>This text is normal.</p>
+
+<p><strong>This text is important!</strong></p>
+
+</body>
+</html>
+
+```
+---
+# style tag
+
+The style tag is used to define style information (CSS) for a document.
+
+Inside the style element you specify how HTML elements should render in a browser.
+
+example
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {color:red;}
+p {color:blue;}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  h1 {color:red;}
+  p {color:blue;}
+</style>
+<style>
+  h1 {color:green;}
+  p {color:pink;}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+<p>Notice that if some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used!</p>
+
+</body>
+</html>
+
+```
+---
+
+# sub tag
+The sub tag defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O.
+
+example
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The sub and sup elements</h1>
+
+<p>This text contains <sub>subscript</sub> text.</p>
+<p>This text contains <sup>superscript</sup> text.</p>
+
+</body>
+</html>
+
+```
+---
+# summary tag
+
+The summary tag defines a visible heading for the details element. The heading can be clicked to view/hide the details.
+
+example1
+```
+<h3>The HTML5 Details/Summary tag with <a href="https://afarkas.github.io/webshim/demos/#DetailsSummary" target="_blank">webshims.lib</a> fallback.</h3>
+
+<details class="funclass" open>
+  <summary>Section 1</summary>
+  <article>
+    <h3>Heading</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  </article>
+</details>
+
+<details class="funclass">
+  <summary>Section 2</summary>
+  <article>
+    <h3>Heading</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  </article>
+</details>
+
+<details class="funclass">
+  <summary>Section 3</summary>
+  <article>
+    <h3>Heading</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  </article>
+</details>
+
+```
+example2
+
+```
+<details>
+    <summary>How does the details-tag work?</summary>
+    <p>The details tag works as an interactive widget that hides / shows content.</p>
+</details>
+<details>
+    <summary>How does the summary-tag work?</summary>
+    <p>The summary tag works as the heading of the details tag. The summary will always be shown and can be clicked to show or hide the other content of the details-tag</p>
+</details>
+<details>
+    <summary>What content can I put in the details-tag?</summary>
+    <p>You can put any content you want inside of the details-tag, though the summary-tag should be the first child.</p>
+</details>
+<details open>
+    <summary>Can I have a details-tag open by default?</summary>
+    <p>Yes you can, simply add the "open" attribute to the details-tag</p>
+</details>
+
+```
+---
+# sup tag
+
+The sup tag defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1].
+
+example
+```
+<html>
+<body>
+
+<h1>The sub and sup elements</h1>
+
+<p>This text contains <sub>subscript</sub> text.</p>
+<p>This text contains <sup>superscript</sup> text.</p>
+
+</body>
+</html>
+
+```
+---
+# svg tag 
+The svg tag defines a container for SVG graphics.
+
+SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+example1
+```
+<html>
+<body>
+
+<h1>The svg element</h1>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+ 
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The svg element</h1>
+
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+</body>
+</html>
+
+```
+---
+# table tag
+The table tag defines an HTML table.
+
+An HTML table consists of one table element and one or more tr, th, and td elements.
+
+The tr element defines a table row, the th element defines a table header, and the td element defines a table cell.
+
+An HTML table may also include caption, colgroup, thead, tfoot, and tbody elements.
+
+example1
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>The table element</h1>
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+```
+example2
+
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>Add Padding to a Table</h1>
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+```
+---
+# tbody tag
+The tbody tag is used to group the body content in an HTML table.
+
+The tbody element is used in conjunction with the thead and tfoot elements to specify each part of a table (body, header, footer).
+
+Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.
+
+Note: The tbody element must have one or more tr tags inside.
+
+example1 html
+```
+<div class="container">
+  <table class="table table-fixed">
+    <thead>
+      <tr>
+        <th class="col-xs-3">First Name</th>
+        <th class="col-xs-3">Last Name</th>
+        <th class="col-xs-6">E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">Doe</td>
+        <td class="col-xs-6">johndoe@email.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```
+example1 css
+```
+body{
+  background-color: #bdc3c7;
+}
+.table-fixed{
+  width: 100%;
+  background-color: #f3f3f3;
+  tbody{
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+    }
+  thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+       background-color: #f39c12;
+       border-color:#e67e22;
+      }
+    }
+  }
+}
+
+```
+example2 html
+```
+<body>
+ <div id="wrapper">
+  <h1>Sortable Table of Search Queries</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Keywords</span></th>
+        <th><span>Impressions</span></th>
+        <th><span>Clicks</span></th>
+        <th><span>CTR</span></th>
+        <th><span>Rank</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="lalign">silly tshirts</td>
+        <td>6,000</td>
+        <td>110</td>
+        <td>1.8%</td>
+        <td>22.2</td>
+      </tr>
+      <tr>
+        <td class="lalign">desktop workspace photos</td>
+        <td>2,200</td>
+        <td>500</td>
+        <td>22%</td>
+        <td>8.9</td>
+      </tr>
+      <tr>
+        <td class="lalign">arrested development quotes</td>
+        <td>13,500</td>
+        <td>900</td>
+        <td>6.7%</td>
+        <td>12.0</td>
+      </tr>
+      <tr>
+        <td class="lalign">popular web series</td>
+        <td>8,700</td>
+        <td>350</td>
+        <td>4%</td>
+        <td>7.0</td>
+      </tr>
+      <tr>
+        <td class="lalign">2013 webapps</td>
+        <td>9,900</td>
+        <td>460</td>
+        <td>4.6%</td>
+        <td>11.5</td>
+      </tr>
+      <tr>
+        <td class="lalign">ring bananaphone</td>
+        <td>10,500</td>
+        <td>748</td>
+        <td>7.1%</td>
+        <td>17.3</td>
+      </tr>
+    </tbody>
+  </table>
+ </div> 
+</body>
+
+```
+example2 CSS
+```
+@import url('https://fonts.googleapis.com/css?family=Amarante');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body { 
+  background: #eee url('https://i.imgur.com/eeQeRmk.png'); /* https://subtlepatterns.com/weave/ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding: 22px 10px;
+  padding-bottom: 55px;
+}
+
+::selection { background: #5f74a0; color: #fff; }
+::-moz-selection { background: #5f74a0; color: #fff; }
+::-webkit-selection { background: #5f74a0; color: #fff; }
+
+br { display: block; line-height: 1.6em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 { 
+  font-family: 'Amarante', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 850px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10px 17px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+```
+---
+# td tag
+The td tag defines a standard data cell in an HTML table.
+
+An HTML table has two kinds of cells:
+
+Header cells - contains header information (created with the th element)
+Data cells - contains data (created with the td element)
+The text in td elements are regular and left-aligned by default.
+
+The text in th elements are bold and centered by default.
+
+example1 html
+```
+<br><h2>Testing Task List Filters</h2><hr><br>
+
+<div class="container">
+  <div class="row">
+    
+      <table class="table">
+        <thead>
+          <tr class="filters">
+            <th>Baths
+              <select id="assigned-user-filter" class="form-control">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </th>
+            <th>Rooms
+              <select id="status-filter" class="form-control">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </th>
+            <th>Milestone
+              <select id="milestone-filter" class="form-control">
+                <option>None</option>
+                <option>Milestone 1</option>
+                <option>Milestone 2</option>
+                <option>Milestone 3</option>
+              </select>
+            </th>
+            <th>Priority
+              <select id="priority-filter" class="form-control">
+                <option>Any</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+            </th>
+            <th>Tags
+              <select id="tags-filter" class="form-control">
+                <option>None</option>
+                <option>Tag 1</option>
+                <option>Tag 2</option>
+                <option>Tag 3</option>
+              </select>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    
+    
+    <div class="panel panel-primary filterable">
+      <div class="panel-heading">
+        <h3 class="panel-title">Tasks</h3>
+        <div class="pull-right"></div>
+      </div>
+
+      
+      
+      
+      
+      <table id="task-list-tbl" class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Created</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Milestone</th>
+            <th>Assigned User</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          
+          <tr id="task-1"
+              class="task-list-row" 
+              data-task-id="1"
+              data-assigned-user="3"
+              data-status="2"
+              data-milestone="Milestone 2"
+              data-priority="Urgent"
+              data-tags="Tag 2">
+            <td>Task title 1</td>
+            <td>01/24/2015</td>
+            <td>09/24/2015</td>
+            <td>3</td>
+            <td>Milestone 2</td>
+            <td>2</td>
+            <td>Tag 2</td>
+          </tr>
+          
+          <tr id="task-2"
+              class="task-list-row" 
+              data-task-id="2"
+              data-assigned-user="1"
+              data-status="3"
+              data-milestone="Milestone 2"
+              data-priority="Low"
+              data-tags="Tag 1">
+            <td>Task title 2</td>
+            <td>03/14/2015</td>
+            <td>09/18/2015</td>
+            <td>1</td>
+            <td>Milestone 2</td>
+            <td>3</td>
+            <td>Tag 1</td>
+          </tr>
+          
+          <tr id="task-3"
+              class="task-list-row" 
+              data-task-id="3"
+              data-assigned-user="2"
+              data-status="4"
+              data-milestone="Milestone 1"
+              data-priority="Low"
+              data-tags="Tag 3">
+            <td>Task title 3</td>
+            <td>11/16/2014</td>
+            <td>02/29/2015</td>
+            <td>2</td>
+            <td>Milestone 1</td>
+            <td>4</td>
+            <td>Tag 3</td>
+          </tr>
+          
+          
+          <tr id="task-4"
+              class="task-list-row" 
+              data-task-id="4"
+              data-assigned-user="1"
+              data-status="1"
+              data-milestone="Milestone 1"
+              data-priority="High"
+              data-tags="Tag 1">
+            <td>Task title 4</td>
+            <td>11/16/2014</td>
+            <td>02/29/2015</td>
+            <td>1</td>
+            <td>Milestone 1</td>
+            <td>1</td>
+            <td>Tag 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+```
+example2
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>The td element</h1>
+
+<p>The td element defines a cell in a table:</p>
+
+<table>
+  <tr>
+    <td>Cell A</td>
+    <td>Cell B</td>
+  </tr>
+  <tr>
+    <td>Cell C</td>
+    <td>Cell D</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+```
+---
+# template tag
+The template tag is used as a container to hold some HTML content hidden from the user when the page loads.
+
+The content inside template can be rendered later with a JavaScript.
+
+You can use the template tag if you have some HTML code you want to use over and over again, but not until you ask for it. To do this without the
+ template tag, you have to create the HTML code with JavaScript to prevent the browser from rendering the code.
+
+example1
+```
+<html>
+<body>
+<style>
+.myClass {
+  color: white;
+  background-color: DodgerBlue;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}
+</style>
+
+<h1>The template Element</h1>
+
+<p>This example fills the web page with one new div element for each item in an array.</p>
+<p>The HTML code of each div element is inside the template element.</p>
+
+<p>Click the button below to display the hidden content from the template element.</p>
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <div class="myClass">I like: </div>
+</template>
+
+<script>
+var myArr = ["Audi", "BMW", "Ford", "Honda", "Jaguar", "Nissan"];
+
+function showContent() {
+  var temp, item, a, i;
+  temp = document.getElementsByTagName("template")[0];
+  //get the div element from the template:
+  item = temp.content.querySelector("div");
+  //for each item in the array:
+  for (i = 0; i < myArr.length; i++) {
+    //Create a new node, based on the template:
+    a = document.importNode(item, true);
+    //Add data from the array:
+    a.textContent += myArr[i];
+    //append the new node wherever you like:
+    document.body.appendChild(a);
+  }
+}
+</script>
+
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The template Element</h1>
+
+<p>Click the button below to display the hidden content from the template element.</p>
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <h2>Flower</h2>
+  <img src="img_white_flower.jpg" width="214" height="204">
+</template>
+
+<script>
+function showContent() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+
+</body>
+</html>
+
+```
+---
+# textarea tag
+The textarea tag defines a multi-line text input control.
+
+The textarea element is often used in a form, to collect user inputs like comments or reviews.
+
+A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).
+
+The size of a text area is specified by the cols and rows attributes (or with CSS).
+
+The name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the text area will be submitted).
+
+The id attribute is needed to associate the text area with a label. 
+
+example1
+```
+<form id="myForm">
+Leave your message: <br />
+<textarea name="my_textarea" rows="4" cols="50">
+Enter your message here.
+</textarea>
+<br />
+<input type="submit" value="Submit" />
+</form>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+example2
+```
+<h1>XMLHttpRequest</h1>
+<iframe style="displa:none" hidden width="700" height="315" src="https://www.youtube.com/embed/hKO3sCZy3DM" frameborder="0" allowfullscreen></iframe>
+<h2>URL:</h2>
+<input type="text">
+<h2>Response:</h2>
+  <textarea name="textarea" id="display" cols="97" rows="10"></textarea>
+  <br><input type="button" value="Push me And then just touch me Till I can get my" id="work">
+
+```
+---
+# tfoot tag
+The tfoot tag is used to group footer content in an HTML table.
+
+The tfoot element is used in conjunction with the thead and tbody elements to specify each part of a table (footer, header, body).
+
+Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.
+
+Note: The tfoot element must have one or more tr tags inside.
+
+The tfoot tag must be used in the following context: As a child of a table element, after any caption, colgroup, thead, and tbody elements.
+
+example1
+```
+<table border="1">
+    <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>This is the Body - 1</td>
+            <td>This is the Body - 2</td>
+            <td>This is the Body - 3</td>
+            <td>This is the Body - 4</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr bgcolor="green">
+            <td>This is Footer - 1</td>
+            <td>This is Footer - 2</td>
+            <td>This is Footer - 3</td>
+            <td>This is Footer - 4</td>
+        </tr>
+    </tfoot>
+</table>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+example2
+```
+<style>
+thead {color:red;}
+tbody {color:black;}
+tfoot {color:pink;}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Ay</th>
+      <th>Gider</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Ocak</td>
+      <td>100 TL</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Şubat</td>
+      <td>50 TL</td>
+    </tr>
+    <tr>
+      <td>Mart</td>
+      <td>70TL</td>
+    </tr>
+  </tbody>
+</table>
+
+```
+---
+
+# th tag
+The th tag defines a header cell in an HTML table.
+
+An HTML table has two kinds of cells:
+
+Header cells - contains header information (created with the th element)
+Data cells - contains data (created with the td element)
+The text in th elements are bold and centered by default.
+
+The text in td elements are regular and left-aligned by default.
+
+example
+```
+<table border="1">
+	<tr>
+		<th>Header 1-1</th>
+		<th>Header 1-2</th>
+		<th>Header 1-3</th>
+		<th>Header 1-4</th>
+	</tr>
+	<tr>
+		<td>Row 2-1</td>
+		<td>Row 2-2</td>
+		<td>Row 2-3</td>
+		<td>Row 2-4</td>
+	</tr>
+</table>
+<br><a href="http://www.cssinhtml.com" target="_blank">Go to CSS in HTML</a>
+
+```
+---
+# thead tag
+The thead tag is used to group header content in an HTML table.
+
+The thead element is used in conjunction with the tbody and tfoot elements to specify each part of a table (header, body, footer).
+
+Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.
+
+Note: The thead element must have one or more tr tags inside.
+
+example
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>The thead, tbody, and tfoot elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
+
+```
+---
+# time tag
+The time tag defines a specific time (or datetime).
+
+The datetime attribute of this element is used translate the time into a machine-readable format so that browsers can offer to add date reminders through the user's calendar, and search engines can produce smarter search results.
+
+example1
+```
+<h1>Timestamps</h1>
+<p>Hover over the timestamps to see the full date:</p>
+<p><time datetime="2017-04-03 08:59" title="Monday 10 April 2017 8:59am">5 minutes ago</time></p>
+<p><time datetime="2017-04-03 07:59" title="Monday 10 April 2017 7:59am">1 hour ago</time></p>
+<p><time datetime="2017-03-31 12:24" title="Monday 8 April 2017 12:24pm">3 days ago</time></p>
+<p><time datetime="2017-03-31 12:24" title="Monday 1 April 2017 12:24pm">Apr 1, 2017</time></p>
+
+```
+
+example2
+```
+<html>
+<body>
+
+<h1>The time element</h1>
+
+<p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+<p><b>Note:</b> The time element does not render as anything special in any of the major browsers.</p>
+
+</body>
+</html>
+
+```
+---
+# title tag
+The title tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.
+
+The title tag is required in HTML documents!
+
+The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
+
+The title element:
+
+defines a title in the browser toolbar
+provides a title for the page when it is added to favorites
+displays a title for the page in search-engine results
+Here are some tips for creating good titles:
+
+Go for a longer, descriptive title (avoid one- or two-word titles)
+Search engines will display about 50-60 characters of the title, so try not to have titles longer than that
+Do not use just a list of words as the title (this may reduce the page's position in search results)
+So, try to make the title as accurate and meaningful as possible!
+
+example
+```
+<html lang="en">
+<head>
+  <title>HTML Elements Reference</title>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+```
+---
+# tr tag
+The tr tag defines a row in an HTML table.
+
+A tr element contains one or more th or td elements.
+
+example
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>The tr element</h1>
+
+<p>The tr element defines a row in a table:</p>
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+```
+---
+# track tag
+
+The track tag specifies text tracks for audio or video elements.
+
+This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
+
+Tracks are formatted in WebVTT format (.vtt files).
+```
+<video width="320" height="240" controls>
+  <track src="altyazı.vtt" kind="altyazı" srclang="tr" label="türkce">
+</video>
+```
+---
+# u tag
+
+The u tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text. The content inside is typically displayed with an underline. You can change this with CSS (see example below). 
+
+example1
+```
+<html>
+<head>
+<style>
+.spelling-error {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>The u element + CSS</h1>
+
+<p>This is some <u class="spelling-error">mispeled</u> text.</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<html>
+<body>
+
+<h1>The u element</h1>
+
+<p>This is some <u>mispeled</u> text.</p>
+
+</body>
+</html>
+
+```
+---
+# ul tag
+The ul tag defines an unordered (bulleted) list.
+
+Use the ul tag together with the li tag to create unordered lists.
+
+Tip: Use CSS to style lists.
+
+example
+```
+<html>
+<body>
+
+<h1>The ul element</h1>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+</body>
+</html>
+
+```
+---
+# var tag
+The var tag is used to defines a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.
+
+example
+```
+<html>
+<body>
+
+<h1>The var element</h1>
+
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+
+</body>
+</html>
+
+```
+---
+# video tag
+The video tag is used to embed video content in a document, such as a movie clip or other video streams.
+
+The video tag contains one or more source tags with different video sources. The browser will choose the first source it supports.
+
+The text between the video and video tags will only be displayed in browsers that do not support the video element.
+
+```
+<html>
+<body>
+
+<h1>The video element</h1>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+
+```
+---
+# wbr tag
+The wbr (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.
+
+example1
+```
+<html>
+<body>
+
+<h1>The wbr element</h1>
+
+<p>Try to shrink the browser window, to view how the very long word in 
+the paragraph below will break:</p>
+
+<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.</p>
+
+<p><b>Note:</b> The wbr element is not supported in Internet Explorer 11 (or earlier).</p>
+
+</body>
+</html>
+
+```
+example2
+```
+<h1>wbr-Tag</h1>
+<p>Donau<wbr>dampf<wbr>schiff<wbr>fahrts<wbr>kapitäns<wbr>mütze</p>
+<h1>shy-Entity</h1>
+<p>Donau&shy;dampf&shy;schiff&shy;fahrts&shy;kapitäns&shy;mütze</p>
+
+```
+---
 
 
 
